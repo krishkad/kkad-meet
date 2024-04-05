@@ -2,6 +2,7 @@ import React from 'react'
 import { Button } from '../ui/button'
 import { FaVideo } from "react-icons/fa";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
     return (
@@ -15,14 +16,20 @@ const Hero = () => {
                     <span className="text-4xl md:text-7xl font-bold max-md:text-center">Video calls with anyone, anywhere</span>
                     <span className="text-sm font-medium text-muted-foreground max-md:text-center">Stay connected and collaborate with friends, family, and colleagues no matter where you are.</span>
                     <div className="flex items-center gap-5">
-                        <Button>Start Meeting</Button>
+                        <Link href={'/meeting'}>
+                            <Button>Start Meeting</Button>
+                        </Link>
                         <Button variant={'ghost'}>Sign up</Button>
                     </div>
                 </div>
-                <div className="w-full h-[80vh] md:w-1/2">
-                    <div className="relative w-full h-full flex justify-center">
-                        {/* <Image src={'/Rectangle-1.svg'} fill sizes='height:100%, width:100%' alt='img' /> */}
-                        <Image src={'/Rectangle.svg'} priority fill sizes='height:100%, width:100%' alt='img' />
+                <div className="w-full h-[160vh] md:h-full md:w-1/2">
+                    <div className="w-full h-full flex max-md:flex-col justify-center items-center">
+                        <div className="w-full md:w-2/4 h-[80vh]  md:h-full relative">
+                            <Image src={'/Rectangle-1.svg'} fill sizes='height:100%, width:100%' alt='img' />
+                        </div>
+                        <div className="w-full md:w-3/4 h-[80vh] md:h-full relative">
+                            <Image src={'/Rectangle.svg'} priority fill sizes='height:100%, width:100%' alt='img' />
+                        </div>
                     </div>
                 </div>
             </div>
