@@ -22,7 +22,7 @@ const Hero = () => {
                 <div className="w-full max-md:h-1/2 md:w-1/2 h-full">
                     <div className="relative w-full h-full flex gap-1 justify-center items-center">
                         {/* <Image src={'/Rectangle-1.svg'} fill sizes='height:100%, width:100%' alt='img' /> */}
-                        <Image src={'/Rectangle.svg'} fill sizes='height:100%, width:100%' alt='img' />
+                        <Image src={'/Rectangle.svg'} priority fill sizes='height:100%, width:100%' alt='img' />
                     </div>
                 </div>
             </div>
