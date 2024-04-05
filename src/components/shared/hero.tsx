@@ -16,10 +16,12 @@ const Hero = () => {
                     <span className="text-4xl md:text-7xl font-bold max-md:text-center">Video calls with anyone, anywhere</span>
                     <span className="text-sm font-medium text-muted-foreground max-md:text-center">Stay connected and collaborate with friends, family, and colleagues no matter where you are.</span>
                     <div className="flex items-center gap-5">
-                        <Link href={'/meeting'}>
+                        <Link href={'/event'}>
                             <Button>Start Meeting</Button>
                         </Link>
-                        <Button variant={'ghost'}>Sign up</Button>
+                        <Link href={'/sign-up'}>
+                            <Button variant={'ghost'}>Sign up</Button>
+                        </Link>
                     </div>
                 </div>
                 <div className="w-full h-[160vh] md:h-full md:w-1/2">

@@ -6,4 +6,4 @@ const MeetingPage = () => {
   )
 }
 
-export default MeetingPage  
+export default MeetingPage
