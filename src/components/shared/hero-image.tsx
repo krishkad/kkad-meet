@@ -14,7 +14,7 @@ const HeroImage = () => {
                 <div className="relative max-sm:hidden w-full h-full mt-20">
                     <Image src={'/right-phone.svg'} priority fill sizes='height:100%, width:100%' alt='img' />
                 </div>
-                <div className="relative w-full sm:hidden h-full">
+                <div className="sm:hidden relative w-full h-full">
                     <Image src={'/mobile-phone-mockup.svg'} priority fill sizes='height:100%, width:100%' alt='img' />
                 </div>
             </div>
