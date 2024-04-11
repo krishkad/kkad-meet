@@ -1,6 +1,7 @@
 import Hero from "@/components/shared/hero";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { FaCircleCheck } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -8,10 +9,10 @@ export default function Home() {
       <div className="">
         <Hero />
         <div className="pt-[80px] pb-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 pb-10 max-w-wrapper">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 xl:gap-10 pb-10 max-w-wrapper">
             <div className="w-full flex flex-col gap-4">
               <span className="text-sm font-bold">For Friends & Family</span>
-              <h2 className="text-4xl md:text-6xl font-bold">Meet Your Family <br />and Friends and <br />have Fun</h2>
+              <h2 className="text-4xl xl:text-6xl font-bold">Meet Your Family <br />and Friends and <br />have Fun</h2>
               <span className="text-sm font-semibold text-muted-foreground md:w-3/5">Get Started. whether you&apos;re new to video calling an experience face to face conversation, and chat  </span>
             </div>
             <div className="w-full flex flex-col">
@@ -64,26 +65,32 @@ export default function Home() {
           </div>
           <div className="w-full max-w-wrapper">
             <div className="w-full flex max-md:flex-col h-max md:h-[500px] rounded-2xl bg-[#1C1678]">
-              <div className="w-full md:w-1/2 flex flex-col p-5 md:p-10">
+              <div className="w-full md:w-1/2 flex flex-col p-5 xl:p-10">
                 <div className="w-full">
                   <h1 className="text-3xl md:text-4xl font-bold text-white">Bringing Faces Closer: <br />Our Video Calling <br />Platform</h1>
-                  <ul className="pl-10 md:pl-20 mt-10 flex flex-col gap-1">
-                    <span className="text-sm font-semibold text-white">Universal device support.</span>
-                    <span className="text-sm font-semibold text-white">Ironclad security measures.</span>
-                    <span className="text-sm font-semibold text-white">Seamless in-call messaging.</span>
+                  <ul className="mt-10 flex flex-col gap-2">
+                    <span className="text-sm font-semibold text-white flex items-center gap-3">
+                      <FaCircleCheck className="w-4 h-4" />
+                      Universal device support.</span>
+                    <span className="text-sm font-semibold text-white flex items-center gap-3">
+                      <FaCircleCheck className="w-4 h-4" />
+                      Ironclad security measures.</span>
+                    <span className="text-sm font-semibold text-white flex items-center gap-3">
+                      <FaCircleCheck className="w-4 h-4" />
+                      Seamless in-call messaging.</span>
                   </ul>
                 </div>
               </div>
               <div className="relative w-full h-[350px] md:w-1/2 md:h-full flex justify-end overflow-hidden">
-                <Image src={'photo-gallery.svg'} fill sizes="height:100%,width:100%" className="" alt="img" />
+                <Image src={'photo-gallery.svg'} fill sizes="height:100%,width:100%" className="object-cover" alt="img" />
               </div>
             </div>
           </div>
           <div className="w-full mt-20 bg-[#272829]">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 pb-10  max-w-wrapper pt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 xl:gap-10 pb-10  max-w-wrapper pt-10">
               <div className="w-full flex flex-col gap-4">
                 <span className="text-sm font-bold text-white">For Friends & Family</span>
-                <h2 className="text-4xl md:text-6xl font-bold text-white">Meet Your Family <br />and Friends and <br />have Fun</h2>
+                <h2 className="text-4xl xl:text-6xl font-bold text-white">Meet Your Family <br />and Friends and <br />have Fun</h2>
                 <span className="text-sm font-semibold text-zinc-300 md:w-3/5">Get Started. whether you&apos;re new to video calling an experience face to face conversation, and chat  </span>
               </div>
               <div className="w-full flex flex-col">
@@ -135,7 +142,7 @@ export default function Home() {
           </div>
           <div className="w-full mt-10 sm:mt-28">
             <div className="max-w-wrapper">
-              <div className="w-full flex max-md:flex-col md:items-center">
+              <div className="w-full flex max-md:flex-col md:items-center max-xl:gap-10">
                 <div className="w-full md:w-1/2">
                   <h1 className="text-3xl sm:text-4xl font-bold">Your Gateway to Seamless <br />Video Conversations</h1>
                   <span className="text-sm font-semibold text-muted-foreground sm:w-3/5 pt-5"> Effortless video conversations with crystal-clear quality. Connect seamlessly with friends, family, and colleagues worldwide. Welcome to the future of virtual communication!</span>
@@ -144,11 +151,17 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <div className="w-full h-[350px] relative">
+                  <div className="w-full max-xl:p-10 h-[350px] relative">
                     <Image src={'/enjoy-call.svg'} fill sizes="height:100%,width:100%" className="object-contain" alt="img" />
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="w-full py-20">
+            <div className="w-full flex flex-col items-center gap-2 sm:gap-4 sm:py-20">
+              <h1 className="text-3xl sm:text-5xl font-bold text-center">Get Started <br />with Kkad <span className="text-primary">Meet</span></h1>
+              <Button className="rounded-full px-5">Get Started</Button>
             </div>
           </div>
         </div>
