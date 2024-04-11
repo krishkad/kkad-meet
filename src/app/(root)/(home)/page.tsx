@@ -84,7 +84,7 @@ export default function Home() {
               <div className="w-full flex flex-col gap-4">
                 <span className="text-sm font-bold text-white">For Friends & Family</span>
                 <h2 className="text-4xl md:text-6xl font-bold text-white">Meet Your Family <br />and Friends and <br />have Fun</h2>
-                <span className="text-sm font-semibold text-zinc-300 md:w-3/5">Get Started. whether you’re new to video calling an experience face to face conversation, and chat  </span>
+                <span className="text-sm font-semibold text-zinc-300 md:w-3/5">Get Started. whether you&apos;re new to video calling an experience face to face conversation, and chat  </span>
               </div>
               <div className="w-full flex flex-col">
                 <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#EBEBEB] md:mt-64 rounded-3xl max-md:mt-10">
