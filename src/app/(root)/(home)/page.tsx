@@ -12,7 +12,7 @@ export default function Home() {
             <div className="w-full flex flex-col gap-4">
               <span className="text-sm font-bold">For Friends & Family</span>
               <h2 className="text-4xl md:text-6xl font-bold">Meet Your Family <br />and Friends and <br />have Fun</h2>
-              <span className="text-sm font-semibold text-muted-foreground md:w-3/5">Get Started. whether you’re new to video calling an experience face to face conversation, and chat  </span>
+              <span className="text-sm font-semibold text-muted-foreground md:w-3/5">Get Started. whether you&apos;re new to video calling an experience face to face conversation, and chat  </span>
             </div>
             <div className="w-full flex flex-col">
               <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#FBEEAC] md:mt-64 rounded-3xl max-md:mt-10">
@@ -105,7 +105,7 @@ export default function Home() {
                 <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#F9B572] md:-mt-64 rounded-3xl">
                   <span className="text-sm font-bold">Meet & Chat</span>
                   <h2 className="text-2xl md:text-3xl font-bold mt-8">Secure End-to-End Encryption</h2>
-                  <p className="font-semibold text-muted-foreground pt-4 text-sm">Rest easy knowing your conversations are fully protected with our platform's end-to-end encryption. Your privacy is paramount, ensuring that only you and your intended recipients have access to your calls.</p>
+                  <p className="font-semibold text-muted-foreground pt-4 text-sm">Rest easy knowing your conversations are fully protected with our platform&apos;s end-to-end encryption. Your privacy is paramount, ensuring that only you and your intended recipients have access to your calls.</p>
 
                   <div className="relative w-full h-[250px] mt-5">
                     <Image src={'secure.svg'} className="object-contain" fill sizes="height:100%, width:100%" alt="img" />
