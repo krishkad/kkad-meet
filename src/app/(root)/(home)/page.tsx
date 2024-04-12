@@ -17,7 +17,7 @@ export default function Home() {
               <span className="text-sm font-semibold text-muted-foreground md:w-3/5">Get Started. whether you&apos;re new to video calling an experience face to face conversation, and chat  </span>
             </div>
             <div className="w-full flex flex-col">
-              <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#FBEEAC] md:mt-64 rounded-3xl max-md:mt-10">
+              <div className="w-full max-h p-5 md:p-8 bg-[#FBEEAC] md:mt-64 rounded-3xl max-md:mt-10">
                 <span className="text-sm font-bold">Step 1</span>
                 <h2 className="text-2xl md:text-3xl font-bold mt-2 sm:mt-4">Create Account </h2>
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account width E-mail and start connecting. </p>
@@ -33,7 +33,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full flex flex-col">
-              <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#AED2FF] md:-mt-64 rounded-3xl">
+              <div className="w-full max-h max-h p-5 md:p-8 bg-[#AED2FF] md:-mt-96 rounded-3xl">
                 <span className="text-sm font-bold">Step 2</span>
                 <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Create room & share link</h2>
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account width E-mail and start connecting.</p>
@@ -49,7 +49,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full flex flex-col">
-              <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#92E3A9] rounded-3xl">
+              <div className="w-full max-h max-h p-5 md:p-8 bg-[#92E3A9] rounded-3xl">
                 <span className="text-sm font-bold">Step 3</span>
                 <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Enter the room and Enjoy </h2>
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Enter the room and instantly enjoy smooth video calls with our platform. Effortless connections for uninterrupted conversations. Join the conversation with ease and experience seamless communication.</p>
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full max-w-wrapper">
-            <div className="w-full flex max-md:flex-col h-max md:h-[500px] rounded-2xl bg-[#1C1678]">
+            <div className="w-full flex max-md:flex-col h-max md:h-[500px] rounded-2xl bg-[#1C1678] overflow-hidden">
               <div className="w-full md:w-1/2 flex flex-col p-5 xl:p-10">
                 <div className="w-full">
                   <h1 className="text-3xl md:text-4xl font-bold text-white">Bringing Faces Closer: <br />Our Video Calling <br />Platform</h1>
@@ -95,7 +95,7 @@ export default function Home() {
                 <span className="text-sm font-semibold text-zinc-300 md:w-3/5">Get Started. whether you&apos;re new to video calling an experience face to face conversation, and chat  </span>
               </div>
               <div className="w-full flex flex-col">
-                <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#EBEBEB] md:mt-64 rounded-3xl max-md:mt-10">
+                <div className="w-full max-h max-h p-5 md:p-8 bg-[#EBEBEB] md:mt-64 rounded-3xl max-md:mt-10">
                   <span className="text-sm font-bold">Meet & Chat</span>
                   <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Crystal-Clear Video Quality</h2>
                   <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Experience pristine video quality with our platform, ensuring every call is sharp and clear, even in low bandwidth situations.</p>
@@ -110,7 +110,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full flex flex-col">
-                <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#F9B572] md:-mt-64 rounded-3xl">
+                <div className="w-full max-h max-h p-5 md:p-8 bg-[#F9B572] md:-mt-96 rounded-3xl">
                   <span className="text-sm font-bold">Meet & Chat</span>
                   <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Secure End-to-End Encryption</h2>
                   <p className="font-semibold text-muted-foreground pt-2 sm:pt-4text-sm">Rest easy knowing your conversations are fully protected with our platform&apos;s end-to-end encryption. Your privacy is paramount, ensuring that only you and your intended recipients have access to your calls.</p>
@@ -125,7 +125,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full flex flex-col">
-                <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#E5E0FF] rounded-3xl">
+                <div className="w-full max-h max-h p-5 md:p-8 bg-[#E5E0FF] rounded-3xl">
                   <span className="text-sm font-bold">Meet & Chat</span>
                   <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Intuitive Interface</h2>
                   <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Navigate our user-friendly interface effortlessly, making video calls a breeze for users of all levels. With simple controls and smooth transitions, connecting with loved ones or colleagues has never been easier.</p>
