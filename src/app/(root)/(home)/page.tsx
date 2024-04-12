@@ -91,7 +91,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 xl:gap-10 pb-10  max-w-wrapper pt-10">
               <div className="w-full flex flex-col gap-4">
                 <span className="text-sm font-bold text-white">For Friends & Family</span>
-                <h2 className="text-4xl xl:text-6xl font-bold text-white">Meet Your Family <br />and Friends and <br />have Fun</h2>
+                <h2 className="text-4xl xl:text-6xl font-bold text-white">Elevate Your Video <br />Calling Experience</h2>
                 <span className="text-sm font-semibold text-zinc-300 md:w-3/5">Get Started. whether you&apos;re new to video calling an experience face to face conversation, and chat  </span>
               </div>
               <div className="w-full flex flex-col">
