@@ -1,7 +1,8 @@
 import Hero from "@/components/shared/hero";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { FaCircleCheck } from "react-icons/fa6";
+// import { MdVerified } from "react-icons/fa6";
+import { MdVerified } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -18,8 +19,8 @@ export default function Home() {
             <div className="w-full flex flex-col">
               <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#FBEEAC] md:mt-64 rounded-3xl max-md:mt-10">
                 <span className="text-sm font-bold">Step 1</span>
-                <h2 className="text-2xl md:text-3xl font-bold mt-8">Create Account </h2>
-                <p className="font-semibold text-muted-foreground pt-4 text-sm">Create account width E-mail and start connecting. </p>
+                <h2 className="text-2xl md:text-3xl font-bold mt-2 sm:mt-4">Create Account </h2>
+                <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account width E-mail and start connecting. </p>
                 <span className="font-semibold text-muted-foreground text-sm">Meet to your Loved Once and have Live interaction with seamless experience</span>
 
                 <div className="relative w-full h-[250px] mt-5">
@@ -34,8 +35,8 @@ export default function Home() {
             <div className="w-full flex flex-col">
               <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#AED2FF] md:-mt-64 rounded-3xl">
                 <span className="text-sm font-bold">Step 2</span>
-                <h2 className="text-2xl md:text-3xl font-bold mt-8">Create room & share link</h2>
-                <p className="font-semibold text-muted-foreground pt-4 text-sm">Create account width E-mail and start connecting.</p>
+                <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Create room & share link</h2>
+                <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account width E-mail and start connecting.</p>
                 <span className="font-semibold text-muted-foreground text-sm">Meet to your Loved Once and have Live interaction with seamless experience</span>
 
                 <div className="relative w-full h-[250px] mt-5">
@@ -50,8 +51,8 @@ export default function Home() {
             <div className="w-full flex flex-col">
               <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#92E3A9] rounded-3xl">
                 <span className="text-sm font-bold">Step 3</span>
-                <h2 className="text-2xl md:text-3xl font-bold mt-8">Enter the room and Enjoy </h2>
-                <p className="font-semibold text-muted-foreground pt-4 text-sm">Enter the room and instantly enjoy smooth video calls with our platform. Effortless connections for uninterrupted conversations. Join the conversation with ease and experience seamless communication.</p>
+                <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Enter the room and Enjoy </h2>
+                <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Enter the room and instantly enjoy smooth video calls with our platform. Effortless connections for uninterrupted conversations. Join the conversation with ease and experience seamless communication.</p>
 
                 <div className="relative w-full h-[250px] mt-5">
                   <Image src={'single-phone.svg'} className="object-contain" fill sizes="height:100%, width:100%" alt="img" />
@@ -70,19 +71,19 @@ export default function Home() {
                   <h1 className="text-3xl md:text-4xl font-bold text-white">Bringing Faces Closer: <br />Our Video Calling <br />Platform</h1>
                   <ul className="mt-10 flex flex-col gap-2">
                     <span className="text-sm font-semibold text-white flex items-center gap-3">
-                      <FaCircleCheck className="w-4 h-4" />
+                      <MdVerified className="w-4 h-4" />
                       Universal device support.</span>
                     <span className="text-sm font-semibold text-white flex items-center gap-3">
-                      <FaCircleCheck className="w-4 h-4" />
+                      <MdVerified className="w-4 h-4" />
                       Ironclad security measures.</span>
                     <span className="text-sm font-semibold text-white flex items-center gap-3">
-                      <FaCircleCheck className="w-4 h-4" />
+                      <MdVerified className="w-4 h-4" />
                       Seamless in-call messaging.</span>
                   </ul>
                 </div>
               </div>
               <div className="relative w-full h-[350px] md:w-1/2 md:h-full flex justify-end overflow-hidden">
-                <Image src={'photo-gallery.svg'} fill sizes="height:100%,width:100%" className="object-cover" alt="img" />
+                <Image src={'photo-gallery.svg'} fill sizes="height:100%,width:100%" className="object-cover overflow-hidden" alt="img" />
               </div>
             </div>
           </div>
@@ -96,8 +97,8 @@ export default function Home() {
               <div className="w-full flex flex-col">
                 <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#EBEBEB] md:mt-64 rounded-3xl max-md:mt-10">
                   <span className="text-sm font-bold">Meet & Chat</span>
-                  <h2 className="text-2xl md:text-3xl font-bold mt-8">Crystal-Clear Video Quality</h2>
-                  <p className="font-semibold text-muted-foreground pt-4 text-sm">Experience pristine video quality with our platform, ensuring every call is sharp and clear, even in low bandwidth situations.</p>
+                  <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Crystal-Clear Video Quality</h2>
+                  <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Experience pristine video quality with our platform, ensuring every call is sharp and clear, even in low bandwidth situations.</p>
 
                   <div className="relative w-full h-[250px] mt-5">
                     <Image src={'meeting.svg'} className="object-contain" fill sizes="height:100%, width:100%" alt="img" />
@@ -111,8 +112,8 @@ export default function Home() {
               <div className="w-full flex flex-col">
                 <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#F9B572] md:-mt-64 rounded-3xl">
                   <span className="text-sm font-bold">Meet & Chat</span>
-                  <h2 className="text-2xl md:text-3xl font-bold mt-8">Secure End-to-End Encryption</h2>
-                  <p className="font-semibold text-muted-foreground pt-4 text-sm">Rest easy knowing your conversations are fully protected with our platform&apos;s end-to-end encryption. Your privacy is paramount, ensuring that only you and your intended recipients have access to your calls.</p>
+                  <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Secure End-to-End Encryption</h2>
+                  <p className="font-semibold text-muted-foreground pt-2 sm:pt-4text-sm">Rest easy knowing your conversations are fully protected with our platform&apos;s end-to-end encryption. Your privacy is paramount, ensuring that only you and your intended recipients have access to your calls.</p>
 
                   <div className="relative w-full h-[250px] mt-5">
                     <Image src={'secure.svg'} className="object-contain" fill sizes="height:100%, width:100%" alt="img" />
@@ -126,8 +127,8 @@ export default function Home() {
               <div className="w-full flex flex-col">
                 <div className="w-full min-h-[600px] max-h p-5 md:p-8 bg-[#E5E0FF] rounded-3xl">
                   <span className="text-sm font-bold">Meet & Chat</span>
-                  <h2 className="text-2xl md:text-3xl font-bold mt-8">Intuitive Interface</h2>
-                  <p className="font-semibold text-muted-foreground pt-4 text-sm">Navigate our user-friendly interface effortlessly, making video calls a breeze for users of all levels. With simple controls and smooth transitions, connecting with loved ones or colleagues has never been easier.</p>
+                  <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Intuitive Interface</h2>
+                  <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Navigate our user-friendly interface effortlessly, making video calls a breeze for users of all levels. With simple controls and smooth transitions, connecting with loved ones or colleagues has never been easier.</p>
 
                   <div className="relative w-full h-[250px] mt-5">
                     <Image src={'interface.svg'} className="object-contain" fill sizes="height:100%, width:100%" alt="img" />
@@ -145,10 +146,7 @@ export default function Home() {
               <div className="w-full flex max-md:flex-col md:items-center max-xl:gap-10">
                 <div className="w-full md:w-1/2">
                   <h1 className="text-3xl sm:text-4xl font-bold">Your Gateway to Seamless <br />Video Conversations</h1>
-                  <span className="text-sm font-semibold text-muted-foreground sm:w-3/5 pt-5"> Effortless video conversations with crystal-clear quality. Connect seamlessly with friends, family, and colleagues worldwide. Welcome to the future of virtual communication!</span>
-                  <div className="pt-5">
-                    <Button variant={'ghost'}>Learn More</Button>
-                  </div>
+                  <p className="text-sm font-semibold text-muted-foreground sm:w-3/5 pt-2 sm:pt-5"> Effortless video conversations with crystal-clear quality. Connect seamlessly with friends, family, and colleagues worldwide. Welcome to the future of virtual communication!</p>
                 </div>
                 <div className="w-full md:w-1/2">
                   <div className="w-full max-xl:p-10 h-[350px] relative">
