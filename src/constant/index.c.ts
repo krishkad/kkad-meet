@@ -1,3 +1,6 @@
+import { FaPlus } from 'react-icons/fa'
+
+
 export const navLinks = [
     {
         label: "Home",
@@ -12,3 +15,5 @@ export const navLinks = [
         href: "/"
     },
 ]
+
+
