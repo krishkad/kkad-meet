@@ -1,10 +1,16 @@
-import ActionBox from '@/components/shared/action-box'
+
+import CurrentTime from '@/components/shared/current-time'
 import EventNavbar from '@/components/shared/event-navbar'
+
+import MeetingList from '@/components/shared/meeting-list'
 import Image from 'next/image'
-import React from 'react'
-import { FaPlus } from 'react-icons/fa'
+import React, { useState } from 'react'
 
 const EventPage = () => {
+  const date = new Date();
+  const showTime = date.getHours()
+    + ':' + date.getMinutes()
+    + ":" + date.getSeconds();
   return (
     <div className='w-full'>
       <div className="max-w-wrapper">
@@ -17,7 +23,7 @@ const EventPage = () => {
                   <p className="text-sm font-medium">Upcomming meeting at: </p>
                 </div>
                 <div className="">
-                  <h1 className='text-3xl font-bold'>12:12 AM</h1>
+                  <h1 className='text-3xl font-bold'><CurrentTime /></h1>
                   <p className="text-sm font-medium"></p>
                 </div>
               </div>
@@ -26,16 +32,10 @@ const EventPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-full my-10">
-            <div className="w-full grid grid-cols-4 max-sm:grid-cols-2 gap-2 sm:gap-5">
-              <ActionBox title={'Start Call'} description='Start instant call share call link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-orange-500' />
-              <ActionBox title={'Join Call'} description='Join existing call by pasting link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-blue-500' />
-              <ActionBox title={'Recorded Call'} description='Join existing call by pasting link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-purple-500' />
-              <ActionBox title={'Previous Call'} description='Join existing call by pasting link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-yellow-500' />
-            </div>
-          </div>
+          <MeetingList />
         </div>
       </div>
+
     </div>
   )
 }
