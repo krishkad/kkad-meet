@@ -22,7 +22,7 @@ const EventPage = () => {
                 </div>
               </div>
               <div className="relative flex w-full sm:w-[350px] h-[350px] sm:h-full">
-                <Image src={'/meeting-event.svg'} priority fill sizes='height:100%,width:100%' className='object-contain' alt='img' />
+                <Image src={'/meeting-event.png'} priority fill sizes='height:100%,width:100%' className='object-contain' alt='img' />
               </div>
             </div>
           </div>
@@ -30,8 +30,8 @@ const EventPage = () => {
             <div className="w-full grid grid-cols-4 max-sm:grid-cols-2 gap-2 sm:gap-5">
               <ActionBox title={'Start Call'} description='Start instant call share call link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-orange-500' />
               <ActionBox title={'Join Call'} description='Join existing call by pasting link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-blue-500' />
-              <ActionBox title={'Previous Call'} description='Join existing call by pasting link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-yellow-500' />
               <ActionBox title={'Recorded Call'} description='Join existing call by pasting link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-purple-500' />
+              <ActionBox title={'Previous Call'} description='Join existing call by pasting link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-yellow-500' />
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import Hero from "@/components/shared/hero";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 // import { MdVerified } from "react-icons/fa6";
 import { MdVerified } from "react-icons/md";
 
@@ -40,7 +41,7 @@ export default function Home() {
                 <span className="font-semibold text-muted-foreground text-sm">Meet to your Loved Once and have Live interaction with seamless experience</span>
 
                 <div className="relative w-full h-[250px] mt-5">
-                  <Image src={'four-mobile.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                  <Image src={'/four-mobile.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
                 <div className="mt-10">
@@ -83,7 +84,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="relative w-full h-[350px] md:w-1/2 md:h-full flex justify-end overflow-hidden">
-                <Image src={'photo-gallery.svg'} priority fill sizes="height:100%,with:100%" className="object-cover overflow-hidden" alt="img" />
+                <Image src={'/photo-gallery.png'} priority fill sizes="height:100%,with:100%" className="object-cover overflow-hidden" alt="img" />
               </div>
             </div>
           </div>
@@ -159,7 +160,9 @@ export default function Home() {
           <div className="w-full py-20">
             <div className="w-full flex flex-col items-center gap-2 sm:gap-4 sm:py-20">
               <h1 className="text-3xl sm:text-5xl font-bold text-center">Get Started <br />with Kkad <span className="text-primary">Meet</span></h1>
-              <Button className="rounded-full px-5">Get Started</Button>
+              <Link href={'/event'}>
+                <Button className="rounded-full px-5">Get Started</Button>
+              </Link>
             </div>
           </div>
         </div>
