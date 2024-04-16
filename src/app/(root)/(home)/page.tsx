@@ -18,7 +18,7 @@ export default function Home() {
               <span className="text-sm font-semibold text-muted-foreground md:w-3/5">Get Started. whether you&apos;re new to video calling an experience face to face conversation, and chat  </span>
             </div>
             <div className="w-full flex flex-col">
-              <div className="w-full max-h p-5 md:p-8 bg-[#FBEEAC] md:mt-64 rounded-3xl max-md:mt-10">
+              <div className="w-full max-h p-5 md:p-8 bg-[#DCFFB7] md:mt-64 rounded-3xl max-md:mt-10">
                 <span className="text-sm font-bold">Step 1</span>
                 <h2 className="text-2xl md:text-3xl font-bold mt-2 sm:mt-4">Create Account </h2>
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account with E-mail and start connecting. </p>
@@ -28,40 +28,34 @@ export default function Home() {
                   <Image src={'create-account.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
-                <div className="mt-10">
-                  <Button variant={'ghost'} className="hover:bg-transparent font-bold">Learn More</Button>
-                </div>
+                
               </div>
             </div>
             <div className="w-full flex flex-col">
-              <div className="w-full max-h max-h p-5 md:p-8 bg-[#AED2FF] md:-mt-96 rounded-3xl">
+              <div className="w-full max-h max-h p-5 md:p-8 bg-[#F6F6F6] md:-mt-96 rounded-3xl">
                 <span className="text-sm font-bold">Step 2</span>
                 <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Create room & share link</h2>
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account with E-mail and start connecting.</p>
                 <span className="font-semibold text-muted-foreground text-sm">Meet to your Loved Once and have Live interaction with seamless experience</span>
 
                 <div className="relative w-full h-[250px] mt-5">
-                  <Image src={'/four-mobile.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                  <Image src={'/four-mobile.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
-                <div className="mt-10">
-                  <Button variant={'ghost'} className="hover:bg-transparent font-bold">Learn More</Button>
-                </div>
+                
               </div>
             </div>
             <div className="w-full flex flex-col">
-              <div className="w-full max-h max-h p-5 md:p-8 bg-[#92E3A9] rounded-3xl">
+              <div className="w-full max-h max-h p-5 md:p-8 bg-[#FFCA61] rounded-3xl">
                 <span className="text-sm font-bold">Step 3</span>
                 <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Enter the room and Enjoy </h2>
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Enter the room and instantly enjoy smooth video calls with our platform. Effortless connections for uninterrupted conversations. Join the conversation with ease and experience seamless communication.</p>
 
                 <div className="relative w-full h-[250px] mt-5">
-                  <Image src={'single-phone.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                  <Image src={'enjoy-call.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
-                <div className="mt-10">
-                  <Button variant={'ghost'} className="hover:bg-transparent font-bold">Learn More</Button>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -105,9 +99,7 @@ export default function Home() {
                     <Image src={'meeting.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                   </div>
 
-                  <div className="mt-10">
-                    <Button variant={'ghost'} className="hover:bg-transparent font-bold">Learn More</Button>
-                  </div>
+                  
                 </div>
               </div>
               <div className="w-full flex flex-col">
@@ -120,9 +112,7 @@ export default function Home() {
                     <Image src={'secure.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                   </div>
 
-                  <div className="mt-10">
-                    <Button variant={'ghost'} className="hover:bg-transparent font-bold">Learn More</Button>
-                  </div>
+                  
                 </div>
               </div>
               <div className="w-full flex flex-col">
@@ -135,9 +125,7 @@ export default function Home() {
                     <Image src={'interface.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                   </div>
 
-                  <div className="mt-10">
-                    <Button variant={'ghost'} className="hover:bg-transparent font-bold">Learn More</Button>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -151,7 +139,7 @@ export default function Home() {
                 </div>
                 <div className="w-full md:w-1/2">
                   <div className="w-full max-xl:p-10 h-[350px] relative">
-                    <Image src={'/enjoy-call.svg'} priority fill sizes="height:100%,with:100%" className="object-contain" alt="img" />
+                    <Image src={'/enjoy-call-2.svg'} priority fill sizes="height:100%,with:100%" className="object-contain" alt="img" />
                   </div>
                 </div>
               </div>
