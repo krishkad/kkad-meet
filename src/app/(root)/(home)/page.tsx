@@ -24,8 +24,8 @@ export default function Home() {
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account with E-mail and start connecting. </p>
                 <span className="font-semibold text-muted-foreground text-sm">Meet to your Loved Once and have Live interaction with seamless experience</span>
 
-                <div className="relative w-full h-[250px] mt-5">
-                  <Image src={'create-account.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                <div className="relative w-full h-[250px] lg:h-[350px] mt-5">
+                  <Image src={'/create-account-people.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
                 
@@ -38,8 +38,8 @@ export default function Home() {
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account with E-mail and start connecting.</p>
                 <span className="font-semibold text-muted-foreground text-sm">Meet to your Loved Once and have Live interaction with seamless experience</span>
 
-                <div className="relative w-full h-[250px] mt-5">
-                  <Image src={'/four-mobile.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                <div className="relative w-full h-[250px] lg:h-[350px] mt-5">
+                  <Image src={'/create-room-share-link.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
                 
