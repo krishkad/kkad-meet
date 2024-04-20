@@ -21,8 +21,7 @@ export default function Home() {
               <div className="w-full max-h p-5 md:p-8 bg-[#FEFDED] md:mt-64 rounded-3xl max-md:mt-10">
                 <span className="text-sm font-bold">Step 1</span>
                 <h2 className="text-2xl md:text-3xl font-bold mt-2 sm:mt-4">Create Account </h2>
-                <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account with E-mail and start connecting. </p>
-                <span className="font-semibold text-muted-foreground text-sm">Meet to your Loved Once and have Live interaction with seamless experience</span>
+                <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account with E-mail and start connecting. Meet to your Loved Once and have Live interaction with seamless experience</p>
 
                 <div className="relative w-full h-[250px] lg:h-[350px] mt-5">
                   <Image src={'/create-account-people.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
@@ -35,8 +34,7 @@ export default function Home() {
               <div className="w-full max-h max-h p-5 md:p-8 bg-[#F3F3F3] md:-mt-96 rounded-3xl">
                 <span className="text-sm font-bold">Step 2</span>
                 <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Create room & share link</h2>
-                <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account with E-mail and start connecting.</p>
-                <span className="font-semibold text-muted-foreground text-sm">Meet to your Loved Once and have Live interaction with seamless experience</span>
+                <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Effortlessly create rooms and share call links with ease, simplifying the process of initiating conversations and connecting with others.</p>
 
                 <div className="relative w-full h-[250px] lg:h-[350px] mt-5">
                   <Image src={'/box-photo-gallery.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
@@ -49,7 +47,7 @@ export default function Home() {
               <div className="w-full max-h max-h p-5 md:p-8 bg-[#FB6D48] rounded-3xl">
                 <span className="text-sm font-bold text-white">Step 3</span>
                 <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4 text-white">Enter the room and Enjoy </h2>
-                <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm text-zinc-   ">Enter the room and instantly enjoy smooth video calls with our platform. Effortless connections for uninterrupted conversations. Join the conversation with ease and experience seamless communication.</p>
+                <p className="font-semibold text-zinc-100 pt-2 sm:pt-4 text-sm">Step into the room and cherish memorable moments with your loved once, creating lasting memories filled with laughter and joy.</p>
 
                 <div className="relative w-full h-[250px] mt-5">
                   <Image src={'/enter-room.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
@@ -106,7 +104,7 @@ export default function Home() {
                 <div className="w-full max-h max-h p-5 md:p-8 bg-[#F9B572] md:-mt-96 rounded-3xl">
                   <span className="text-sm font-bold">Meet & Chat</span>
                   <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Secure End-to-End Encryption</h2>
-                  <p className="font-semibold text-muted-foreground pt-2 sm:pt-4text-sm">Rest easy knowing your conversations are fully protected with our platform&apos;s end-to-end encryption. Your privacy is paramount, ensuring that only you and your intended recipients have access to your calls.</p>
+                  <p className="font-semibold text-muted-foreground pt-2 sm:pt-4text-sm">Your conversations are fully protected with our end-to-end encryption. Rest easy knowing your privacy is paramount.</p>
 
                   <div className="relative w-full h-[250px] mt-5">
                     <Image src={'secure.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
@@ -119,7 +117,7 @@ export default function Home() {
                 <div className="w-full max-h max-h p-5 md:p-8 bg-[#E5E0FF] rounded-3xl">
                   <span className="text-sm font-bold">Meet & Chat</span>
                   <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Intuitive Interface</h2>
-                  <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Navigate our user-friendly interface effortlessly, making video calls a breeze for users of all levels. With simple controls and smooth transitions, connecting with loved ones or colleagues has never been easier.</p>
+                  <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Easily navigate our user-friendly interface for seamless video calls. Simple controls make connecting with loved ones or colleagues a breeze.</p>
 
                   <div className="relative w-full h-[250px] mt-5">
                     <Image src={'interface.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
@@ -135,7 +133,7 @@ export default function Home() {
               <div className="w-full flex max-md:flex-col md:items-center max-xl:gap-10">
                 <div className="w-full md:w-1/2">
                   <h1 className="text-3xl sm:text-4xl font-bold">Your Gateway to Seamless <br />Video Conversations</h1>
-                  <p className="text-sm font-semibold text-muted-foreground sm:w-3/5 pt-2 sm:pt-5"> Effortless video conversations with crystal-clear quality. Connect seamlessly with friends, family, and colleagues worldwide. Welcome to the future of virtual communication!</p>
+                  <p className="text-sm font-semibold text-muted-foreground max-sm:w-full pt-2 sm:pt-5">Effortless video conversations with crystal-clear quality. Connect seamlessly with friends, family, and colleagues worldwide. Welcome to the future of virtual communication!</p>
                 </div>
                 <div className="w-full md:w-1/2">
                   <div className="w-full max-xl:p-10 h-[350px] relative">
