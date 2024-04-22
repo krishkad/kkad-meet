@@ -18,13 +18,13 @@ export default function Home() {
               <span className="text-sm font-semibold text-muted-foreground md:w-3/5">Get Started. whether you&apos;re new to video calling an experience face to face conversation, and chat  </span>
             </div>
             <div className="w-full flex flex-col">
-              <div className="w-full max-h p-5 md:p-8 bg-[#FEFDED] md:mt-64 rounded-3xl max-md:mt-10">
+              <div className="w-full max-h p-5 md:p-8 bg-[#F3FDE8] md:mt-64 rounded-3xl max-md:mt-10">
                 <span className="text-sm font-bold">Step 1</span>
                 <h2 className="text-2xl md:text-3xl font-bold mt-2 sm:mt-4">Create Account </h2>
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account with E-mail and start connecting. Meet to your Loved Once and have Live interaction with seamless experience</p>
 
                 <div className="relative w-full h-[250px] lg:h-[350px] mt-5">
-                  <Image src={'/create-account-people.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                  <Image src={'/create-account-people.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
                 
@@ -44,13 +44,13 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full flex flex-col">
-              <div className="w-full max-h max-h p-5 md:p-8 bg-[#FB6D48] rounded-3xl">
-                <span className="text-sm font-bold text-white">Step 3</span>
-                <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4 text-white">Enter the room and Enjoy </h2>
-                <p className="font-semibold text-zinc-100 pt-2 sm:pt-4 text-sm">Step into the room and cherish memorable moments with your loved once, creating lasting memories filled with laughter and joy.</p>
+              <div className="w-full max-h max-h p-5 md:p-8 bg-[#FEFDED] rounded-3xl">
+                <span className="text-sm font-bold">Step 3</span>
+                <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Enter the room and Enjoy </h2>
+                <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Step into the room and cherish memorable moments with your loved once, creating lasting memories filled with laughter and joy.</p>
 
-                <div className="relative w-full h-[250px] mt-5">
-                  <Image src={'/enter-room.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                <div className="relative w-full h-[250px] lg:h-[350px] mt-5">
+                  <Image src={'/enjoy.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
                 
