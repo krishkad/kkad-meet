@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import Image from "next/image";
 
 
 interface MeetingDialog {
@@ -30,11 +31,13 @@ export default function MeetingDialog({ open, onClose, type }: MeetingDialog) {
                         Click on start call and share the link with your family/friend
                     </DialogDescription>
                 </DialogHeader>
-                <div className="grid gap-4 py-4">
-
+                <div className="h-[200px] w-full py-4">
+                    <div className="relative h-full w-full">
+                        <Image src={'/start-call.svg'} fill className="object-contain" sizes="height:100%,width:100%" alt="start call" />
+                    </div>
                 </div>
                 <DialogFooter>
-                    <Button>
+                    <Button className="w-full">
                         Start Call
                     </Button>
                 </DialogFooter>
@@ -47,6 +50,9 @@ export default function MeetingDialog({ open, onClose, type }: MeetingDialog) {
                     </DialogDescription>
                 </DialogHeader>
                 <div className="grid gap-4 py-4">
+                    <div className="relative w-full h-[180px]">
+                        <Image src={'/join-call.svg'} fill sizes="height:100%,width:100%" className="object-contain" alt="join call" />
+                    </div>
                     <div className="w-full flex flex-col gap-2">
                         <Label htmlFor="join-call-link" className="font-semibold">
                             Enter call link
@@ -59,7 +65,7 @@ export default function MeetingDialog({ open, onClose, type }: MeetingDialog) {
                     </div>
                 </div>
                 <DialogFooter>
-                    <Button>
+                    <Button className="w-full">
                         Join Call
                     </Button>
                 </DialogFooter>
