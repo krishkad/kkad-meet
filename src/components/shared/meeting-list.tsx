@@ -32,7 +32,7 @@ const CallList = () => {
                 description='Paste link and join your Call'
                 buttonText='Enter call link'
                 image='/join-call.svg'
-                children={<div className="w-full flex flex-col gap-2">
+                children={(<div className="w-full flex flex-col gap-2">
                     <Label htmlFor="join-call-link" className="font-semibold">
                         Enter call link
                     </Label>
@@ -41,7 +41,7 @@ const CallList = () => {
                         className="col-span-3"
                         placeholder="Enter Link"
                     />
-                </div>}
+                </div>)}
                 onClose={() => setCallState(undefined)}
             />
         </div>
