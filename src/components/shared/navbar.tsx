@@ -2,6 +2,7 @@ import { navLinks } from '@/constant/index.c'
 import Link from 'next/link'
 import React from 'react'
 import { Button } from '../ui/button'
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
 const Navbar = () => {
     return (
@@ -21,12 +22,17 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="flex items-center gap-5">
-                        <Link href={'/sign-up'}>
-                            <Button className='text-sm' size={'sm'}>Sign Up</Button>
-                        </Link>
-                        <Link href={'/sign-in'}>
-                            <Button className='text-sm' size={'sm'} variant={'ghost'}>Sign In</Button>
-                        </Link>
+                        <SignedOut>
+                            <Link href={'/sign-up'}>
+                                <Button className='text-sm' size={'sm'}>Sign Up</Button>
+                            </Link>
+                            <Link href={'/sign-in'}>
+                                <Button className='text-sm' size={'sm'} variant={'ghost'}>Sign In</Button>
+                            </Link>
+                        </SignedOut>
+                        <SignedIn>
+                            <UserButton afterSignOutUrl='/' />
+                        </SignedIn>
                     </div>
                 </div>
             </div>

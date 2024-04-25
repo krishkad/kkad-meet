@@ -1,3 +1,4 @@
+import { SignedIn, UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
 import React from 'react'
 
@@ -10,6 +11,10 @@ const EventNavbar = () => {
                         <h2 className="text-xl font-semibold">kkad <span className="text-primary">Meet</span></h2>
                     </Link>
                 </div>
+
+                <SignedIn>
+                    <UserButton afterSignOutUrl='/' />
+                </SignedIn>
             </div>
         </div>
     )

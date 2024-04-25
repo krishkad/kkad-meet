@@ -1,3 +1,4 @@
+import { RedirectToSignIn } from '@clerk/nextjs';
 import {
     clerkMiddleware,
     createRouteMatcher
@@ -9,6 +10,8 @@ const isProtectedRoute = createRouteMatcher([
 
 export default clerkMiddleware((auth, req) => {
     if (isProtectedRoute(req)) auth().protect();
+    // Handle users who aren't authenticated
+    
 });
 
 export const config = {
