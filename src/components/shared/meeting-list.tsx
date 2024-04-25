@@ -5,9 +5,52 @@ import MeetingDialog from '@/components/shared/meeting-dialog'
 import { FaPlus } from 'react-icons/fa'
 import { Label } from '../ui/label'
 import { Input } from '../ui/input'
+import { useUser } from '@clerk/nextjs'
+import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk'
+import { useRouter } from 'next/navigation'
 
 const CallList = () => {
-    const [callState, setCallState] = useState<"instantCall" | "joinCall" | "recordedCall" | "PerviousCall" | undefined>()
+    const [callState, setCallState] = useState<"instantCall" | "joinCall" | "recordedCall" | "PerviousCall" | undefined>();
+    const { user } = useUser();
+    const client = useStreamVideoClient();
+    const [value, setValue] = useState({
+        dateTime: new Date(),
+        description: "",
+        link: ""
+    });
+    const [callDetails, setCallDetails] = useState<Call>()
+    const router = useRouter();
+
+    const createMeeting = async () => {
+        if (!user || !client) return;
+        try {
+            const id = crypto.randomUUID();
+            const call = client.call('default', id);
+
+            if (!call) throw new Error("faild to create call");
+
+            const starts_at = value.dateTime.toISOString() || new Date(Date.now()).toISOString();
+
+            const description = value.description || "Instant Meeting";
+
+
+            await call.getOrCreate({
+                data: {
+                    starts_at,
+                    custom: {
+                        description
+                    }
+                },
+            })
+            setCallDetails(call);
+
+            if (!value.description) {
+                router.push(`/event/meeting/${call.id}`);
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
     return (
         <div className="w-full my-10">
             <div className="w-full grid grid-cols-4 max-sm:grid-cols-2 gap-2 sm:gap-5">
@@ -24,6 +67,7 @@ const CallList = () => {
                 buttonText='Start Call'
                 image='/start-call.svg'
                 onClose={() => setCallState(undefined)}
+                onClick={createMeeting}
             />
             <MeetingDialog
                 open={callState === "joinCall"}

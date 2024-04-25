@@ -1,8 +1,8 @@
 import React from 'react'
 
-const MeetingPage = () => {
+const MeetingPage = ({ params }: { params: { id: string } }) => {
   return (
-    <div>MeetingPage</div>
+    <div className='w-full '>MeetingPage: {params.id}</div>
   )
 }
 
