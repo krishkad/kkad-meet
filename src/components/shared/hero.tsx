@@ -2,12 +2,12 @@ import React from 'react'
 import { Button } from '../ui/button'
 import Link from 'next/link';
 import HeroImage from './hero-image';
+import { SignedOut } from '@clerk/nextjs';
 
 const Hero = () => {
     return (
         <div className='w-full'>
             <div className="max-w-wrapper">
-
                 <div className="w-full flex flex-col items-center ">
                     <div className="flex w-full xl:w-1/2 mt-16 flex-col items-center justify-center gap-3">
                         <span className="text-4xl md:text-6xl font-bold text-center">Video calls with <br />anyone, anywhere</span>
@@ -16,9 +16,11 @@ const Hero = () => {
                             <Link href={'/event'}>
                                 <Button>Start Meeting</Button>
                             </Link>
-                            <Link href={'/sign-up'}>
-                                <Button variant={'ghost'}>Sign up</Button>
-                            </Link>
+                            <SignedOut>
+                                <Link href={'/sign-up'}>
+                                    <Button variant={'ghost'}>Sign up</Button>
+                                </Link>
+                            </SignedOut>
                         </div>
 
                     </div>
