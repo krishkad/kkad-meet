@@ -8,8 +8,11 @@ import { Input } from '../ui/input'
 import { useUser } from '@clerk/nextjs'
 import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk'
 import { useRouter } from 'next/navigation'
+import { useToast } from '../ui/use-toast'
+import { ToastAction } from '../ui/toast'
 
 const CallList = () => {
+    const { toast } = useToast();
     const [callState, setCallState] = useState<"instantCall" | "joinCall" | "recordedCall" | "PerviousCall" | undefined>();
     const { user } = useUser();
     const client = useStreamVideoClient();
@@ -18,7 +21,7 @@ const CallList = () => {
         description: "",
         link: ""
     });
-    const [callDetails, setCallDetails] = useState<Call>()
+    const [callDetails, setCallDetails] = useState<Call>();
     const router = useRouter();
 
     const createMeeting = async () => {
@@ -33,7 +36,6 @@ const CallList = () => {
 
             const description = value.description || "Instant Meeting";
 
-
             await call.getOrCreate({
                 data: {
                     starts_at,
@@ -41,16 +43,18 @@ const CallList = () => {
                         description
                     }
                 },
-            })
+            });
             setCallDetails(call);
 
             if (!value.description) {
                 router.push(`/event/meeting/${call.id}`);
             }
+            toast({ title: "meeting created", variant: "default", action: <ToastAction altText="Share Link">Share Link</ToastAction>, });
         } catch (error) {
-            console.log(error)
+            toast({ title: "faild to create meeting" });
         }
     }
+
     return (
         <div className="w-full my-10">
             <div className="w-full grid grid-cols-4 max-sm:grid-cols-2 gap-2 sm:gap-5">
