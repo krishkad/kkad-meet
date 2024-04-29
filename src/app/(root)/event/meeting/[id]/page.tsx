@@ -1,14 +1,33 @@
 "use client";
-import React, { useState } from 'react';
-import VideoRoom from '@/components/shared/video-room';
-import VideoSetup from '@/components/shared/video-setup';
+import React, { useEffect, useState } from 'react';
+import MeetingRoom from '@/components/shared/meeting-room';
+import MeetingSetup from '@/components/shared/meeting-setup';
+import { useUser } from '@clerk/nextjs';
+import { StreamCall, StreamTheme } from '@stream-io/video-react-sdk';
+import { useGetCallById } from '@/hooks/useGetCallById';
+import Loader from '@/components/shared/loader';
 
-const MeetingPage = ({ params }: { params: { id: string } }) => {
+const MeetingPage = ({ params: { id } }: { params: { id: string } }) => {
+  const { user, isLoaded } = useUser();
   const [isSetupComplete, setIsSetupComplete] = useState(false);
+
+  const { call, isCallLoading } = useGetCallById(id);
+  useEffect(() => {
+      console.log({isCallLoading, isLoaded})
+  }, [isCallLoading, isLoaded])
+  
+  if (isCallLoading || !isLoaded) return (
+    <Loader />
+  )
+
   return (
-    <div className='w-full '>
-      {!isSetupComplete ? <VideoSetup /> : <VideoRoom />};
-    </div>
+    <main className='w-full'>
+      <StreamCall call={call}>
+        <StreamTheme>
+          {!isSetupComplete ? <MeetingSetup /> : <MeetingRoom />};
+        </StreamTheme>
+      </StreamCall>
+    </main>
   )
 }
 
