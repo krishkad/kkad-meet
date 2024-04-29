@@ -7,7 +7,7 @@ const MeetingPage = ({ params }: { params: { id: string } }) => {
   const [isSetupComplete, setIsSetupComplete] = useState(false);
   return (
     <div className='w-full '>
-      {isSetupComplete ? <VideoSetup /> : <VideoRoom />};
+      {!isSetupComplete ? <VideoSetup /> : <VideoRoom />};
     </div>
   )
 }
