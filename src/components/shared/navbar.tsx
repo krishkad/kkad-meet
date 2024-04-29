@@ -31,7 +31,7 @@ const Navbar = () => {
                             </Link>
                         </SignedOut>
                         <SignedIn>
-                            <UserButton afterSignOutUrl='/' />
+                            <UserButton afterSignOutUrl='/sign-in' />
                         </SignedIn>
                     </div>
                 </div>
