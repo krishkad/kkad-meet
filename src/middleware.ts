@@ -1,18 +1,34 @@
-import {
-    clerkMiddleware,
-    createRouteMatcher
-} from '@clerk/nextjs/server';
+import { authMiddleware, redirectToSignIn } from "@clerk/nextjs";
+import { NextResponse } from "next/server";
 
-const isProtectedRoute = createRouteMatcher([
-    '/event(.*)',
-]);
+export default authMiddleware({
+    publicRoutes: ["/"],
+    afterAuth(auth, req, evt) {
+        // Handle users who aren't authenticated
+        if (!auth.userId && !auth.isPublicRoute) {
+            return redirectToSignIn({ returnBackUrl: req.url });
+        }
 
-export default clerkMiddleware((auth, req) => {
-    if (isProtectedRoute(req)) auth().protect();
-    // Handle users who aren't authenticated
-    
+        if (req.nextUrl.pathname.startsWith('/event')) {
+            if (auth.userId && !auth.isPublicRoute) {
+                return NextResponse.next();
+            }
+            return NextResponse.redirect(new URL('/', req.nextUrl));
+        }
+
+        // If the user is signed in and trying to access a protected route, allow them to access route
+        if (auth.userId && !auth.isPublicRoute) {
+            return NextResponse.next();
+        }
+
+        // Allow users visiting public routes to access them
+        return NextResponse.next();
+    },
 });
 
 export const config = {
-    matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
-};
+    // Protects all routes, including api/trpc.
+    // See https://clerk.com/docs/references/nextjs/auth-middleware
+    // for more information about configuring your Middleware
+    matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
+}

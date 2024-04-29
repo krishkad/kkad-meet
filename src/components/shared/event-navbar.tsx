@@ -11,7 +11,6 @@ const EventNavbar = () => {
                         <h2 className="text-xl font-semibold">kkad <span className="text-primary">Meet</span></h2>
                     </Link>
                 </div>
-
                 <SignedIn>
                     <UserButton afterSignOutUrl='/sign-in' />
                 </SignedIn>
