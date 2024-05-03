@@ -6,7 +6,7 @@ const MeetingSetup = () => {
     const [toggleCamMicOn, setToggleCamMicOn] = useState(false);
     const call = useCall();
 
-    if(!call) {
+    if (!call) {
         throw new Error("useCall should be used in StreamCall");
     }
     useEffect(() => {
@@ -24,7 +24,7 @@ const MeetingSetup = () => {
     return (
         <div className='w-screen h-screen flex flex-col items-center justify-center gap-3'>
             <h2 className="text-2xl font-bold">Setup</h2>
-            <VideoPreview mirror className='aspect-video' />
+            <VideoPreview mirror={false} className='w-full h-[200px]' />
             MeetingSetup
         </div>
     )
