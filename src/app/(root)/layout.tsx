@@ -10,6 +10,10 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
                 <Toaster />
             </main>
         </div>
+
+
+
+
     )
 }
 
