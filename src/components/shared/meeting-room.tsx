@@ -1,5 +1,5 @@
+import React, { useState } from 'react';
 import { PaginatedGridLayout, SpeakerLayout } from '@stream-io/video-react-sdk';
-import React, { useState } from 'react'
 
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
 
@@ -20,10 +20,11 @@ const MeetingRoom = () => {
 
     }
   }
+
   return (
-    <div className='w-full'>
+    <div className='w-full overflow-hidden'>
       <div className="max-w-wrapper h-screen">
-        <div className="w-full h-full flex items-center justify-center">
+        <div className="relative size-full flex items-center justify-center">
           <div className="flex size-full max-w-[1000px] items-center">
             <CallLayout />
           </div>

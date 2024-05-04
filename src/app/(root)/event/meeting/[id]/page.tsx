@@ -12,8 +12,7 @@ const MeetingPage = ({ params: { id } }: { params: { id: string } }) => {
   const [isSetupComplete, setIsSetupComplete] = useState(false);
 
   const { call, isCallLoading } = useGetCallById(id);
-  useEffect(() => {
-  }, [isCallLoading, isLoaded])
+
   
   if (isCallLoading || !isLoaded) return (
     <Loader />

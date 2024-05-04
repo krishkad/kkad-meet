@@ -42,12 +42,15 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
                     </div>
                 </div>
                 <div className="w-full flex justify-center items-center mt-10">
-                    <Button onClick={() => setIsSetupComplete(true)}>
+                    <Button onClick={() => {
+                        call.join();
+                        setIsSetupComplete(true)
+                    }}>
                         Enter the Call
                     </Button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
