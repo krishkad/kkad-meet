@@ -22,12 +22,17 @@ const MeetingSetup = () => {
     }, [toggleCamMicOn, call?.microphone, call?.camera]);
 
     return (
-        <div className='w-screen h-screen flex flex-col items-center justify-center gap-3'>
-            <h2 className="text-2xl font-bold">Setup</h2>
-            <div className="relative w-full aspect-square">
-                <VideoPreview mirror={false} />
+        <div className="max-w-wrapper">
+
+            <div className='w-screen h-screen flex flex-col items-center justify-center gap-3'>
+                <h2 className="text-2xl font-bold">Setup</h2>
+                <div className="relative w-full aspect-square">
+                    <VideoPreview mirror={false} className='absolute inset-0' />
+                </div>
+                <div className="w-full">
+
+                </div>
             </div>
-            MeetingSetup
         </div>
     )
 }
