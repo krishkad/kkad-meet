@@ -1,8 +1,9 @@
 "use client";
 import { VideoPreview, useCall } from '@stream-io/video-react-sdk';
-import React, { FormEventHandler, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Checkbox } from '../ui/checkbox';
 import { Label } from '../ui/label';
+import { Button } from '../ui/button';
 
 const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: boolean) => void }) => {
     const [toggleCamMicOn, setToggleCamMicOn] = useState(false);
@@ -39,6 +40,11 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
                             Turn On/Off Camera and Mic
                         </Label>
                     </div>
+                </div>
+                <div className="w-full flex justify-center items-center mt-10">
+                    <Button onClick={()=> setIsSetupComplete(true)}>
+                        Enter the Call
+                    </Button>
                 </div>
             </div>
         </div>
