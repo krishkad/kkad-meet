@@ -24,7 +24,9 @@ const MeetingSetup = () => {
     return (
         <div className='w-screen h-screen flex flex-col items-center justify-center gap-3'>
             <h2 className="text-2xl font-bold">Setup</h2>
-            <VideoPreview mirror={false} />
+            <div className="relative w-full aspect-square">
+                <VideoPreview mirror={false} />
+            </div>
             MeetingSetup
         </div>
     )
