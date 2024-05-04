@@ -22,7 +22,6 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
         }
     }, [toggleCamMicOn, call?.microphone, call?.camera]);
 
-    console.log(toggleCamMicOn)
     return (
         <div className="max-w-wrapper">
             <div className='w-full h-full flex flex-col items-center justify-center gap-3'>

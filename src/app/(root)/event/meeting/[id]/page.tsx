@@ -13,7 +13,6 @@ const MeetingPage = ({ params: { id } }: { params: { id: string } }) => {
 
   const { call, isCallLoading } = useGetCallById(id);
   useEffect(() => {
-      console.log({isCallLoading, isLoaded})
   }, [isCallLoading, isLoaded])
   
   if (isCallLoading || !isLoaded) return (
