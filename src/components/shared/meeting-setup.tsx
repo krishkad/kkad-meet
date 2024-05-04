@@ -1,6 +1,6 @@
 "use client";
 import { VideoPreview, useCall } from '@stream-io/video-react-sdk';
-import React, { useEffect, useState } from 'react';
+import React, { FormEventHandler, useEffect, useState } from 'react';
 import { Checkbox } from '../ui/checkbox';
 import { Label } from '../ui/label';
 
@@ -22,6 +22,7 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
         }
     }, [toggleCamMicOn, call?.microphone, call?.camera]);
 
+    console.log(toggleCamMicOn)
     return (
         <div className="max-w-wrapper">
             <div className='w-full h-full flex flex-col items-center justify-center gap-3'>
@@ -31,7 +32,7 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
                 </div>
                 <div className="w-full">
                     <div className="flex items-center space-x-2">
-                        <Checkbox id="camera-mic" name='camera-mic' onChange={(e: any) => setToggleCamMicOn(e.target.ckecked)} />
+                        <Checkbox id="camera-mic" name='camera-mic' onClick={(e: any) => setToggleCamMicOn(!toggleCamMicOn)} />
                         <Label
                             htmlFor="camera-mic"
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
