@@ -27,7 +27,7 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
             <div className='w-full h-full flex flex-col items-center justify-center gap-3'>
                 <h2 className="text-2xl font-bold">Setup</h2>
                 <div className="relative w-full aspect-video">
-                    <VideoPreview mirror={false} className='absolute inset-0' />
+                    <VideoPreview mirror={false} className='aspect-video' />
                 </div>
                 <div className="w-full">
                     <div className="flex items-center space-x-2">
