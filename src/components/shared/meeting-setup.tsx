@@ -1,5 +1,5 @@
 "use client";
-import { VideoPreview, useCall } from '@stream-io/video-react-sdk';
+import { CallPreview, VideoPreview, useCall } from '@stream-io/video-react-sdk';
 import React, { useEffect, useState } from 'react';
 import { Checkbox } from '../ui/checkbox';
 import { Label } from '../ui/label';
@@ -28,7 +28,11 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
             <div className='w-full h-full flex flex-col items-center justify-center gap-3'>
                 <h2 className="text-2xl font-bold">Setup</h2>
                 <div className="relative w-full aspect-video">
-                    <VideoPreview mirror={false} className='w-full h-[300px] aspect-video' />
+                    {/* <VideoPreview mirror={false} className='w-full h-[300px] aspect-video' /> */}
+                    <CallPreview
+                        className="my-call-preview-class"
+                        style={{ width: '240px', height: '135px' }}
+                    />
                 </div>
                 <div className="w-full">
                     <div className="flex items-center space-x-2">
@@ -42,7 +46,7 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
                     </div>
                 </div>
                 <div className="w-full flex justify-center items-center mt-10">
-                    <Button onClick={()=> setIsSetupComplete(true)}>
+                    <Button onClick={() => setIsSetupComplete(true)}>
                         Enter the Call
                     </Button>
                 </div>
