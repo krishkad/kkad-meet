@@ -18,7 +18,7 @@ const EventPage = () => {
         <div className="w-full ">
           <div className="w-full">
             <div className="w-full h-max max-sm:gap-5 p-5 bg-zinc-50 flex max-sm:flex-col justify-between rounded-sm">
-              <div className="flex h-full flex-col justify-between">
+              <div className="flex h-full flex-col justify-between gap-20">
                 <div className="">
                   <p className="text-sm font-medium">Upcomming meeting at: </p>
                 </div>
