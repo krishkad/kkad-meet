@@ -22,7 +22,7 @@ const MeetingPage = ({ params: { id } }: { params: { id: string } }) => {
     <main className='w-full'>
       <StreamCall call={call}>
         <StreamTheme>
-          {!isSetupComplete ? <MeetingSetup setIsSetupComplete={setIsSetupComplete} /> : <MeetingRoom />};
+          {!isSetupComplete ? <MeetingSetup setIsSetupComplete={setIsSetupComplete} /> : <MeetingRoom />}
         </StreamTheme>
       </StreamCall>
     </main>

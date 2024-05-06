@@ -23,14 +23,14 @@ const MeetingRoom = () => {
 
   return (
     <div className='w-full overflow-hidden'>
-      <div className="max-w-wrapper h-screen">
-        <div className="relative size-full flex flex-col items-center justify-center">
+      <div className="relative max-w-wrapper h-screen">
+        <div className="size-full h-[calc(100vh-64px)] flex flex-col items-center justify-center">
           <div className="flex size-full max-w-[1000px] items-center">
             <CallLayout />
           </div>
-          <div className="absolute bottom-0 size-full flex items-center justify-center">
-            <CallControls />
-          </div>
+        </div>
+        <div className="absolute bottom-0 w-full h-max flex items-center justify-center">
+          <CallControls />
         </div>
       </div>
     </div>
