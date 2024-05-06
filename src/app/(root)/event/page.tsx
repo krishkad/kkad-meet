@@ -17,7 +17,7 @@ const EventPage = () => {
         <EventNavbar />
         <div className="w-full ">
           <div className="w-full">
-            <div className="w-full h-[380px] max-sm:h-max max-sm:gap-5 p-5 bg-zinc-50 flex max-sm:flex-col justify-between rounded-sm">
+            <div className="w-full h-max max-sm:gap-5 p-5 bg-zinc-50 flex max-sm:flex-col justify-between rounded-sm">
               <div className="flex h-full flex-col justify-between">
                 <div className="">
                   <p className="text-sm font-medium">Upcomming meeting at: </p>
@@ -27,9 +27,9 @@ const EventPage = () => {
                   <p className="text-sm font-medium"></p>
                 </div>
               </div>
-              <div className="relative flex w-full sm:w-[350px] h-[350px] sm:h-full">
+              {/* <div className="relative flex w-full sm:w-[350px] h-[350px] sm:h-full">
                 <Image src={'/meeting-event.png'} priority fill sizes='height:100%,width:100%' className='object-contain' alt='img' />
-              </div>
+              </div> */}
             </div>
           </div>
           <MeetingList />
