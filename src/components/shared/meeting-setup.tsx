@@ -24,7 +24,7 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
 
     return (
         <div className="max-w-wrapper overflow-hidden">
-            <div className='w-full h-full flex flex-col items-center justify-center gap-3'>
+            <div className='w-full h-dvh flex flex-col items-center justify-center gap-3'>
                 <h2 className="text-2xl font-bold">Setup</h2>
                 <div className="relative">
                     <VideoPreview mirror={false} />

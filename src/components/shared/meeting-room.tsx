@@ -23,7 +23,7 @@ const MeetingRoom = () => {
 
   return (
     <div className='w-full overflow-hidden'>
-      <div className="max-w-wrapper h-svh">
+      <div className="max-w-wrapper h-dvh">
         <div className="relative size-full">
           <div className="size-full h-[calc(100%-64px)] flex flex-col items-center justify-center">
             <div className="flex size-full max-w-[1000px] items-center">
