@@ -19,12 +19,11 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
         } else {
             call?.microphone.enable();
             call?.camera.enable();
-
         }
     }, [toggleCamMicOn, call?.microphone, call?.camera]);
 
     return (
-        <div className="max-w-wrapper">
+        <div className="max-w-wrapper overflow-hidden">
             <div className='w-full h-full flex flex-col items-center justify-center gap-3'>
                 <h2 className="text-2xl font-bold">Setup</h2>
                 <div className="relative">
@@ -44,7 +43,7 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
                 <div className="w-full flex justify-center items-center mt-10">
                     <Button onClick={() => {
                         call.join();
-                        setIsSetupComplete(true)
+                        setIsSetupComplete(true);
                     }}>
                         Enter the Call
                     </Button>
