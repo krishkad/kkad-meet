@@ -26,11 +26,11 @@ const MeetingRoom = () => {
       <div className="max-w-wrapper h-dvh">
         <div className="relative size-full">
           <div className="size-full h-[calc(100%-64px)] flex flex-col items-center justify-center">
-            <div className="flex size-full max-w-[1000px] items-center">
+            <div className="flex size-full max-w-[1000px] items-center text-white">
               <CallLayout />
             </div>
           </div>
-          <div className="absolute bottom-0 w-full h-max flex justify-center justify-self-stretch">
+          <div className="absolute bottom-0 w-full h-max flex justify-center justify-self-stretch text-white">
             <CallControls />
           </div>
         </div>
