@@ -8,7 +8,9 @@ const EventNavbar = () => {
             <div className="w-full h-16 flex justify-between items-center">
                 <div className="">
                     <Link href={'/'}>
-                        <h2 className="text-xl font-semibold">kkad <span className="text-primary">Meet</span></h2>
+                        <span className="text-xl font-bold text-primary">
+                            Talky
+                        </span>
                     </Link>
                 </div>
                 <SignedIn>

@@ -27,7 +27,7 @@ export default function Home() {
                   <Image src={'/create-account-people.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
-                
+
               </div>
             </div>
             <div className="w-full flex flex-col">
@@ -40,7 +40,7 @@ export default function Home() {
                   <Image src={'/box-photo-gallery.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
-                
+
               </div>
             </div>
             <div className="w-full flex flex-col">
@@ -53,7 +53,7 @@ export default function Home() {
                   <Image src={'/enjoy.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
-                
+
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function Home() {
                     <Image src={'meeting.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                   </div>
 
-                  
+
                 </div>
               </div>
               <div className="w-full flex flex-col">
@@ -110,7 +110,7 @@ export default function Home() {
                     <Image src={'secure.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                   </div>
 
-                  
+
                 </div>
               </div>
               <div className="w-full flex flex-col">
@@ -123,7 +123,7 @@ export default function Home() {
                     <Image src={'interface.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
                   </div>
 
-                  
+
                 </div>
               </div>
             </div>
@@ -145,7 +145,9 @@ export default function Home() {
           </div>
           <div className="w-full py-20">
             <div className="w-full flex flex-col items-center gap-2 sm:gap-4 sm:py-20">
-              <h1 className="text-3xl sm:text-5xl font-bold text-center">Get Started <br />with Kkad <span className="text-primary">Meet</span></h1>
+              <h1 className="text-3xl sm:text-5xl font-bold text-center">Get Started <br />with  <span className="text-primary">
+                Talky
+              </span></h1>
               <Link href={'/event'}>
                 <Button className="rounded-full px-5">Get Started</Button>
               </Link>

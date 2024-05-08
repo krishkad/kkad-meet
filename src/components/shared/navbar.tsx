@@ -10,8 +10,8 @@ const Navbar = () => {
             <div className="max-w-wrapper">
                 <div className="w-full h-16 flex items-center justify-between">
                     <div className='flex items-center gap-5'>
-                        <span className="text-xl font-bold">
-                            Kkad <span className="text-primary">Meet</span>
+                        <span className="text-xl font-bold text-primary">
+                            Talky
                         </span>
                         <div className="hidden md:flex items-center gap-5">
                             {navLinks.map((item, i) => {
