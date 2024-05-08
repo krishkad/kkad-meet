@@ -88,7 +88,7 @@ export default function Home() {
                 <span className="text-sm font-semibold text-zinc-300 md:w-3/5">Get Started. whether you&apos;re new to video calling an experience face to face conversation, and chat  </span>
               </div>
               <div className="w-full flex flex-col">
-                <div className="w-full max-h max-h p-5 md:p-8 bg-[#EBEBEB] md:mt-64 rounded-3xl max-md:mt-10">
+                <div className="w-full max-h max-h p-5 md:p-8 bg-[#F9F9F9] md:mt-64 rounded-3xl max-md:mt-10">
                   <span className="text-sm font-bold">Meet & Chat</span>
                   <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Crystal-Clear Video Quality</h2>
                   <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Experience pristine video quality with our platform, ensuring every call is sharp and clear, even in low bandwith situations.</p>
