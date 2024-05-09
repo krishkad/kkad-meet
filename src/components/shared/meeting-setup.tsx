@@ -22,14 +22,14 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
 
     useEffect(() => {
         if (video) {
-            call.camera.disable();
-        } else {
             call.camera.enable();
+        } else {
+            call.camera.disable();
         }
         if (mic) {
-            call.microphone.disable();
-        } else {
             call.microphone.enable();
+        } else {
+            call.microphone.disable();
         }
 
     }, [video, mic, call?.microphone, call?.camera])
