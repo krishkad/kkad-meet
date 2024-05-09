@@ -9,6 +9,7 @@ type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
 const MeetingRoom = () => {
   const [layout, setLayout] = useState<CallLayoutType>('grid');
   const router = useRouter();
+  const call = useCall();
 
 
   const CallLayout = () => {
@@ -36,7 +37,8 @@ const MeetingRoom = () => {
           </div>
           <div className="absolute bottom-0 w-full h-max flex justify-center justify-self-stretch text-white">
             <CallControls onLeave={async () => {
-              await router.push('/event');
+              await call?.endCall();
+              router.push('/event');
             }} />
           </div>
         </div>
