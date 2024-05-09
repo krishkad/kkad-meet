@@ -1,22 +1,26 @@
+"sue client";
 import React, { useState } from 'react';
-import { CallControls, PaginatedGridLayout, SpeakerLayout } from '@stream-io/video-react-sdk';
+import { CallControls, PaginatedGridLayout, SpeakerLayout, useCall } from '@stream-io/video-react-sdk';
+import { useRouter } from 'next/navigation';
 
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
 
 
 const MeetingRoom = () => {
-  const [layout, setLayout] = useState<CallLayoutType>('speaker-left');
+  const [layout, setLayout] = useState<CallLayoutType>('grid');
+  const router = useRouter();
+
 
   const CallLayout = () => {
     switch (layout) {
-      case 'grid':
-        return <PaginatedGridLayout />
+      case 'speaker-left':
+        return <SpeakerLayout participantsBarPosition={'right'} />
 
       case 'speaker-right':
         return <SpeakerLayout participantsBarPosition={"left"} />
 
       default:
-        return <SpeakerLayout participantsBarPosition={'right'} />
+        return <PaginatedGridLayout />
 
     }
   }
@@ -31,7 +35,9 @@ const MeetingRoom = () => {
             </div>
           </div>
           <div className="absolute bottom-0 w-full h-max flex justify-center justify-self-stretch text-white">
-            <CallControls />
+            <CallControls onLeave={async () => {
+              await router.push('/event');
+            }} />
           </div>
         </div>
       </div>
