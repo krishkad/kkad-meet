@@ -1,7 +1,6 @@
 "use client";
 import { CallPreview, VideoPreview, useCall } from '@stream-io/video-react-sdk';
 import React, { useEffect, useState } from 'react';
-import { Checkbox } from '../ui/checkbox';
 import { Label } from '../ui/label';
 import { Button } from '../ui/button';
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -13,7 +12,7 @@ import { MicOff, Video, VideoOff } from 'lucide-react';
 import { Mic } from 'lucide-react';
 
 const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: boolean) => void }) => {
-    const [video, setVideo] = useState(true);
+    const [video, setVideo] = useState(false);
     const [mic, setMic] = useState(true);
     const call = useCall();
 
