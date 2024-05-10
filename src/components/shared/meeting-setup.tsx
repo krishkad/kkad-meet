@@ -10,15 +10,22 @@ import {
 } from "@/components/ui/card"
 import { MicOff, Video, VideoOff } from 'lucide-react';
 import { Mic } from 'lucide-react';
+import { Input } from '../ui/input';
+import { useToast } from '../ui/use-toast';
 
 const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: boolean) => void }) => {
     const [video, setVideo] = useState(false);
+    const [copyMeetingUrl, setCopyMeetingUrl] = useState(false);
     const [mic, setMic] = useState(true);
     const call = useCall();
+    const { toast } = useToast();
 
     if (!call) {
         throw new Error("useCall should be used in StreamCall");
     }
+
+    const domain = process.env.NEXT_PUBLIC_APP_API_AUTH;
+    const meetingUrl = `${domain}/meeting/${call?.id}`;
 
     useEffect(() => {
         if (video) {
@@ -34,6 +41,12 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
 
     }, [video, mic, call?.microphone, call?.camera])
 
+
+    const copylink = () => {
+        setCopyMeetingUrl(true);
+        navigator.clipboard.writeText(meetingUrl);
+        toast({ title: "link copied successfuly", variant: "default" });
+    }
 
     return (
         <div className="max-w-wrapper overflow-hidden">
@@ -77,6 +90,12 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
                             </CardContent>
                         </Card>
                     </div>
+                </div>
+                <div className="flex space-x-2 mt-10">
+                    <Input value={meetingUrl} readOnly className='bg-accent' />
+                    <Button variant={'ghost'} className={`shrink-0`} onClick={copylink}>
+                        Copy Link
+                    </Button>
                 </div>
                 <div className="w-full flex justify-center items-center mt-10">
                     <Button onClick={() => {
