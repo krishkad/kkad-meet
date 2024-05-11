@@ -1,5 +1,5 @@
 "use client";
-import { CallPreview, VideoPreview, useCall } from '@stream-io/video-react-sdk';
+import { VideoPreview, useCall } from '@stream-io/video-react-sdk';
 import React, { useEffect, useState } from 'react';
 import { Label } from '../ui/label';
 import { Button } from '../ui/button';
@@ -7,7 +7,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import {
     Card,
     CardContent
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import { MicOff, Video, VideoOff } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Input } from '../ui/input';
@@ -45,7 +45,7 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
     const copylink = () => {
         setCopyMeetingUrl(true);
         navigator.clipboard.writeText(meetingUrl);
-        toast({ title: "link copied successfuly", variant: "success" });
+        toast({ title: `link copied successfuly`, variant: "success" });
     }
 
     return (
@@ -92,7 +92,7 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
                     </div>
                 </div>
                 <div className="flex space-x-2 mt-10">
-                    <Input value={meetingUrl} readOnly className='bg-accent' />
+                    <Input value={meetingUrl} readOnly className='bg-accent focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0' />
                     <Button variant={'ghost'} className={`shrink-0`} onClick={copylink}>
                         Copy Link
                     </Button>

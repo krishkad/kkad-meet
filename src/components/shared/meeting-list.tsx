@@ -50,7 +50,7 @@ const CallList = () => {
             if (!value.description) {
                 router.push(`/event/meeting/${call.id}`);
             }
-            toast({ title: "meeting created successfuly", variant: "default" });
+            toast({ title: "meeting created successfuly", variant: "success" });
         } catch (error) {
             toast({ title: "faild to create meeting", variant: "success" });
         }
@@ -89,8 +89,9 @@ const CallList = () => {
                     </Label>
                     <Input
                         id="join-call-link"
-                        className="col-span-3"
+                        className="col-span-3 focus:ring-0 focus:ring-offset-0 focus-visible:right-0 focus-visible:ring-0 focus-visible:ring-offset-0"
                         placeholder="Enter Link"
+                        
                     />
                 </div>
             </ MeetingDialog>
