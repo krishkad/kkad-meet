@@ -45,7 +45,7 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
     const copylink = () => {
         setCopyMeetingUrl(true);
         navigator.clipboard.writeText(meetingUrl);
-        toast({ title: "link copied successfuly", variant: "default" });
+        toast({ title: "link copied successfuly", variant: "success" });
     }
 
     return (

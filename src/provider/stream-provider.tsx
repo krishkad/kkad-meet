@@ -12,6 +12,10 @@ import { ReactNode, useEffect, useState } from 'react';
 
 const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KAY;
 
+// const apiKey = "mmhfdzb5evj2"
+// const userId = "IG_88"
+// const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiSUdfODgiLCJpc3MiOiJodHRwczovL3Byb250by5nZXRzdHJlYW0uaW8iLCJzdWIiOiJ1c2VyL0lHXzg4IiwiaWF0IjoxNzE1NDE5Mjg2LCJleHAiOjE3MTYwMjQwOTF9.bwjyvU6-MDrIMIdCpuG-JxFqOurMAiy08FXPl1JX1Lw"
+
 export const StreamProvider = ({ children }: { children: ReactNode }) => {
     const [videoClient, setVideoClient] = useState<StreamVideoClient>();
     const { user, isLoaded } = useUser();

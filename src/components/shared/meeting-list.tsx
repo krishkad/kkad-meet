@@ -12,6 +12,7 @@ import { useToast } from '../ui/use-toast'
 import { ToastAction } from '../ui/toast'
 
 const CallList = () => {
+    // const callId = "8pYDzE86xNoI"
     const { toast } = useToast();
     const [callState, setCallState] = useState<"instantCall" | "joinCall" | "recordedCall" | "PerviousCall" | undefined>();
     const { user } = useUser();
@@ -49,9 +50,9 @@ const CallList = () => {
             if (!value.description) {
                 router.push(`/event/meeting/${call.id}`);
             }
-            toast({ title: "meeting created successfuly", variant: "default"});
+            toast({ title: "meeting created successfuly", variant: "default" });
         } catch (error) {
-            toast({ title: "faild to create meeting" });
+            toast({ title: "faild to create meeting", variant: "success" });
         }
     }
 

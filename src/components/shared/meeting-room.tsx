@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { CallControls, PaginatedGridLayout, SpeakerLayout, useCall } from '@stream-io/video-react-sdk';
 import { useRouter } from 'next/navigation';
+import MyUiLayout from '../ui/my-layout';
 
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
 
@@ -27,12 +28,13 @@ const MeetingRoom = () => {
   }
 
   return (
-    <div className='w-full overflow-hidden'>
+    <div className='w-full overflow-hidden bg-[#252525]'>
       <div className="max-w-wrapper h-dvh">
         <div className="relative size-full">
           <div className="size-full h-[calc(100%-64px)] flex flex-col items-center justify-center">
-            <div className="flex size-full max-w-[1000px] items-center text-white">
-              <CallLayout />
+            <div className="relative flex size-full max-w-[1000px] items-center text-white">
+              {/* <CallLayout /> */}
+              <MyUiLayout />
             </div>
           </div>
           <div className="absolute bottom-0 w-full h-max flex justify-center justify-self-stretch text-white">
