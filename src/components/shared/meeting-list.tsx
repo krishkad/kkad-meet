@@ -56,13 +56,37 @@ const CallList = () => {
         }
     }
 
+
     return (
         <div className="w-full my-5 sm:my-10">
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
-                <ActionBox title={'Start Call'} description='Start instant call share call link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-orange-500' handleClick={() => setCallState("instantCall")} />
-                <ActionBox title={'Join Call'} description='Join existing call by pasting link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-blue-500' handleClick={() => setCallState("joinCall")} />
-                <ActionBox title={'Recorded Call'} description='Join existing call by pasting link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-[#9400FF]' handleClick={() => setCallState("recordedCall")} />
-                <ActionBox title={'Previous Call'} description='Join existing call by pasting link' icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-[#FFC100]' handleClick={() => setCallState("PerviousCall")} />
+                <ActionBox
+                    title={'Start Call'}
+                    description='Start instant call share call link'
+                    icon={<FaPlus className='w-6 h-6 text-zinc-50' />}
+                    className='bg-orange-500'
+                    handleClick={() => setCallState("instantCall")}
+                />
+                <ActionBox
+                    title={'Join Call'}
+                    description='Join existing call by pasting link'
+                    icon={<FaPlus className='w-6 h-6 text-zinc-50' />} className='bg-blue-500'
+                    handleClick={() => setCallState("joinCall")}
+                />
+                <ActionBox
+                    title={'Recorded Call'}
+                    description='Join existing call by pasting link'
+                    icon={<FaPlus className='w-6 h-6 text-zinc-50' />}
+                    className='bg-[#9400FF]'
+                    handleClick={() => router.push('/event/recorded')}
+                />
+                <ActionBox
+                    title={'Previous Call'}
+                    description='Join existing call by pasting link'
+                    icon={<FaPlus className='w-6 h-6 text-zinc-50' />}
+                    className='bg-[#FFC100]'
+                    handleClick={() => router.push('/event/pervious')}
+                />
             </div>
             <MeetingDialog
                 open={callState === "instantCall"}
@@ -91,7 +115,7 @@ const CallList = () => {
                         id="join-call-link"
                         className="col-span-3 focus:ring-0 focus:ring-offset-0 focus-visible:right-0 focus-visible:ring-0 focus-visible:ring-offset-0"
                         placeholder="Enter Link"
-                        
+
                     />
                 </div>
             </ MeetingDialog>
