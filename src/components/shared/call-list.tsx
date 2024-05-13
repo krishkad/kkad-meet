@@ -55,16 +55,17 @@ const CallsList = ({ type }: { type: 'ended' | 'recorded' }) => {
     return (
         <div className="w-full">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-                {callList && callList.length > 0 ? callList.map((call: Call | CallRecording, i) => {
+                {callList && callList.length > 0 && callList.map((call: Call | CallRecording, i) => {
                     return <MeetingCard key={i} />
-                }) : (
-                    <div>
-                        {noCallMessage}
-                    </div>
-                )}
+                })}
             </div>
+            {callList && callList.length <= 0 && (
+                <div className='w-full'>
+                    {noCallMessage}
+                </div>
+            )}
         </div>
-    )
-}
+    );
+};
 
-export default CallsList
+export default CallsList;
