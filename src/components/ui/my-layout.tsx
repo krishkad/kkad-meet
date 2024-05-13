@@ -64,7 +64,7 @@ export const MyFloatingLocalParticipant = (props: { participant?: StreamVideoPar
     const { participant } = props;
 
     return (
-        <div className="absolute bottom-4 right-4 w-36 h-60 shadow-lg rounded-md">
+        <div className="absolute bottom-0 right-0 w-36 h-60 shadow-lg rounded-md">
             {participant && <ParticipantView muteAudio participant={participant} className='size-full' />}
         </div>
     )

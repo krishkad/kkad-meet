@@ -9,7 +9,7 @@ import { useUser } from '@clerk/nextjs'
 import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk'
 import { useRouter } from 'next/navigation'
 import { useToast } from '../ui/use-toast'
-import { ToastAction } from '../ui/toast'
+import { Textarea } from '../ui/textarea'
 
 const CallList = () => {
     // const callId = "8pYDzE86xNoI"
@@ -35,7 +35,7 @@ const CallList = () => {
 
             const starts_at = value.dateTime.toISOString() || new Date(Date.now()).toISOString();
 
-            const description = value.description || "Instant Meeting";
+            const description = value.description || "Instant Call";
 
             await call.getOrCreate({
                 data: {
@@ -47,7 +47,7 @@ const CallList = () => {
             });
             setCallDetails(call);
 
-            if (!value.description) {
+            if (description) {
                 router.push(`/event/meeting/${call.id}`);
             }
             toast({ title: "meeting created successfuly", variant: "success" });
@@ -97,7 +97,20 @@ const CallList = () => {
                 image='/start-call.svg'
                 onClose={() => setCallState(undefined)}
                 onClick={createMeeting}
-            />
+            >
+                <div className="w-full flex flex-col gap-2">
+                    <Label htmlFor="call-description" className="font-semibold">
+                        Description
+                    </Label>
+                    <Textarea
+                        id="call-description"
+                        className="col-span-3 focus:ring-0 focus:ring-offset-0 focus-visible:right-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm"
+                        placeholder="Enter Description"
+                        onChange={(e) => setValue({ ...value, description: e.target.value.toString() })}
+
+                    />
+                </div>
+            </MeetingDialog>
             <MeetingDialog
                 open={callState === "joinCall"}
                 type={callState}
@@ -113,7 +126,7 @@ const CallList = () => {
                     </Label>
                     <Input
                         id="join-call-link"
-                        className="col-span-3 focus:ring-0 focus:ring-offset-0 focus-visible:right-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+                        className="col-span-3 focus:ring-0 focus:ring-offset-0 focus-visible:right-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm"
                         placeholder="Enter Link"
 
                     />

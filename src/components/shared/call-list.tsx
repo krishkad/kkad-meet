@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import Loader from './loader';
 import { PiCircleNotchThin } from 'react-icons/pi';
 import MeetingCard from './meeting-card';
+import Image from 'next/image';
 
 const CallsList = ({ type }: { type: 'ended' | 'recorded' }) => {
 
@@ -25,11 +26,21 @@ const CallsList = ({ type }: { type: 'ended' | 'recorded' }) => {
     const getNoCallMessage = () => {
         switch (type) {
             case 'ended':
-                return "No Calls Yet"
+                return (
+                    <div className="w-full h-[calc(100dvh-146px)] flex flex-col items-center justify-center gap-4">
+                        <Image src={'/empty.svg'} width={100} height={100} alt='img' />
+                        <p className="text-sm font-semibold">No Calls Yet</p>
+                    </div>
+                )
             case 'recorded':
-                return "No Recorded Calls"
+                return (
+                    <div className="w-full h-[calc(100dvh-146px)] flex flex-col items-center justify-center gap-4">
+                        <Image src={'/empty.svg'} width={100} height={100} alt='img' />
+                        <p className="text-sm font-semibold">No Recorded Calls</p>
+                    </div>
+                )
             default:
-                return []
+                return ''
         }
     }
 
@@ -47,9 +58,9 @@ const CallsList = ({ type }: { type: 'ended' | 'recorded' }) => {
                 {callList && callList.length > 0 ? callList.map((call: Call | CallRecording, i) => {
                     return <MeetingCard key={i} />
                 }) : (
-                    <p>
+                    <div>
                         {noCallMessage}
-                    </p>
+                    </div>
                 )}
             </div>
         </div>
