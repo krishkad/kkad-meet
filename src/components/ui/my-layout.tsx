@@ -44,9 +44,9 @@ export const MyParticipantList = (props: { participants: StreamVideoParticipant[
     const { participants } = props;
 
     return (
-        <div className="flex flex-row gap-2 w-screen">
+        <div className="flex flex-row justify-center gap-2 size-full">
             {participants.map((participant, i) => {
-                return <div className="size-full aspect-[9/18]" key={i}>
+                return <div className="max-sm:size-full aspect-[9/18]" key={i}>
                     <ParticipantView
                         muteAudio
                         participant={participant}

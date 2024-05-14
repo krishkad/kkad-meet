@@ -40,7 +40,7 @@ export default function MeetingDialog({ open, onClose, title, description, butto
 
     return (
         <Dialog open={open} onOpenChange={onClose}>
-            <DialogContent className="w-[320px] sm:max-w-[425px]" onOpenAutoFocus={(e) => e.preventDefault()} >
+            <DialogContent className="w-[320px] sm:max-w-[425px]" onOpenAutoFocus={(e:any) => e.preventDefault()} >
                 <DialogHeader>
                     <DialogTitle>{title}</DialogTitle>
                     <DialogDescription>

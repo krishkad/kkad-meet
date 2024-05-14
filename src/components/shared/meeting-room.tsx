@@ -32,7 +32,7 @@ const MeetingRoom = () => {
       <div className="max-w-wrapper h-dvh">
         <div className="relative size-full">
           <div className="size-full h-[calc(100%-64px)] flex flex-col items-center justify-center">
-            <div className="relative flex size-full max-w-[1000px] items-center text-white">
+            <div className="relative flex size-full max-w-[1000px] items-center justify-center text-white">
               {/* <CallLayout /> */}
               <MyUiLayout />
             </div>
