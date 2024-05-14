@@ -30,14 +30,14 @@ const MeetingRoom = () => {
   return (
     <div className='w-full overflow-hidden bg-[#252525]'>
       <div className="max-w-wrapper h-dvh">
-        <div className="relative size-full">
+        <div className="relative size-full flex flex-col justify-center items-center gap-2">
           <div className="size-full h-[calc(100%-64px)] flex flex-col items-center justify-center">
             <div className="relative flex size-full max-w-[1000px] items-center justify-center text-white">
               {/* <CallLayout /> */}
               <MyUiLayout />
             </div>
           </div>
-          <div className="absolute bottom-0 w-full h-max flex justify-center justify-self-stretch text-white">
+          <div className="w-full h-16 flex justify-center justify-self-stretch text-white">
             <CallControls onLeave={async () => {
               await call?.endCall();
               router.push('/event');

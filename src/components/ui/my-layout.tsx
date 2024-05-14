@@ -35,7 +35,6 @@ const MyUiLayout = () => {
             <div className="grid grid-cols-2 gap-2">
                 <MyParticipantList2 participants={remoteParticipant} />
                 <MyFloatingLocalParticipant2 participant={localParticipant} />
-
             </div>
             </>
             }
