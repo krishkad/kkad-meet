@@ -132,7 +132,7 @@ export default function Home() {
             <div className="max-w-wrapper">
               <div className="w-full flex max-md:flex-col md:items-center max-xl:gap-10">
                 <div className="w-full md:w-1/2">
-                  <h1 className="text-3xl sm:text-4xl font-bold">Your Gateway to Seamless <br />Video Conversations</h1>
+                  <h1 className="text-3xl sm:text-4xl font-bold">Your Gateway to Seamless <br className="max-lg:hidden"/>Video Conversations</h1>
                   <p className="text-sm font-semibold text-muted-foreground max-sm:w-full pt-2 sm:pt-5">Effortless video conversations with crystal-clear quality. Connect seamlessly with friends, family, and colleagues worldwide. Welcome to the future of virtual communication!</p>
                 </div>
                 <div className="w-full md:w-1/2">
