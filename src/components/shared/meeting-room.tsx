@@ -27,7 +27,7 @@ const MeetingRoom = () => {
     }
   }
 
-  if (!call) return router.push('/event');
+  if(call?.endCall()) return router.push('/event');  
   
   return (
     <div className='w-full overflow-hidden bg-[#252525]'>
