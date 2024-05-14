@@ -28,8 +28,17 @@ const MyUiLayout = () => {
     };
     return (
         <div className='size-full relative'>
-            <MyParticipantList participants={remoteParticipant} />
-            <MyFloatingLocalParticipant participant={localParticipant} />
+            {remoteParticipant.length + 1 <= 2 ? <>
+                <MyParticipantList participants={remoteParticipant} />
+                <MyFloatingLocalParticipant participant={localParticipant} />
+            </>: <>
+            <div className="grid grid-cols-2 gap-2">
+                <MyParticipantList2 participants={remoteParticipant} />
+                <MyFloatingLocalParticipant2 participant={localParticipant} />
+
+            </div>
+            </>
+            }
         </div>
     );
 };
@@ -65,6 +74,38 @@ export const MyFloatingLocalParticipant = (props: { participant?: StreamVideoPar
 
     return (
         <div className="absolute bottom-0 right-0 w-36 h-60 shadow-lg rounded-md">
+            {participant && <ParticipantView muteAudio participant={participant} className='size-full' />}
+        </div>
+    )
+}
+
+// NOTE ---------------------> PARTICIPANT LIST 
+export const MyParticipantList2 = (props: { participants: StreamVideoParticipant[] }) => {
+
+    const { participants } = props;
+
+    return (
+        <>
+            {participants.map((participant, i) => {
+                return <div className="max-sm:size-full aspect-[9/18]" key={i}>
+                    <ParticipantView
+                        muteAudio
+                        participant={participant}
+                        key={participant.sessionId}
+                        className='size-full'
+                    />
+                </div>
+            })}
+        </>
+    );
+};
+
+// NOTE --------------------->  MY LOCAL PARTICIPANT 
+export const MyFloatingLocalParticipant2 = (props: { participant?: StreamVideoParticipant }) => {
+    const { participant } = props;
+
+    return (
+        <div className="size-full rounded-md">
             {participant && <ParticipantView muteAudio participant={participant} className='size-full' />}
         </div>
     )
