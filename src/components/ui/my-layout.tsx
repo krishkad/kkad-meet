@@ -27,9 +27,9 @@ const MyUiLayout = () => {
     if (callingState !== CallingState.JOINED) {
         return <Loader />
     };
+
     return (
         <div className='size-full relative'>
-            {/* <PaginatedGridLayout groupSize={2} /> */}
             {remoteParticipant.length + 1 <= 2 ? <>
                 <MyParticipantList participants={remoteParticipant} />
                 <MyFloatingLocalParticipant participant={localParticipant} />

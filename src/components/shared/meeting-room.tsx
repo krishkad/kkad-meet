@@ -27,6 +27,8 @@ const MeetingRoom = () => {
     }
   }
 
+  if (!call) return router.push('/event');
+  
   return (
     <div className='w-full overflow-hidden bg-[#252525]'>
       <div className="max-w-wrapper h-dvh">
@@ -37,7 +39,7 @@ const MeetingRoom = () => {
               <MyUiLayout />
             </div>
           </div>
-          <div className="w-full h-16 flex justify-center justify-self-stretch text-white">
+          <div className="w-full h-16 flex justify-center items-center justify-self-stretch text-white">
             <CallControls onLeave={async () => {
               await call?.endCall();
               router.push('/event');
