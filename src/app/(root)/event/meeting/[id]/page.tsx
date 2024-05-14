@@ -13,7 +13,7 @@ const MeetingPage = ({ params: { id } }: { params: { id: string } }) => {
 
   const { call, isCallLoading } = useGetCallById(id);
 
-  
+
   if (isCallLoading || !isLoaded) return (
     <Loader />
   )

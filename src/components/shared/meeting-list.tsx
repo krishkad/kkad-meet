@@ -14,7 +14,12 @@ import { Textarea } from '../ui/textarea'
 const CallList = () => {
     // const callId = "VH1ID3k5poWs";
     const { toast } = useToast();
-    const [callState, setCallState] = useState<"instantCall" | "joinCall" | "recordedCall" | "PerviousCall" | undefined>();
+    const [callState, setCallState] = useState<
+        "instantCall" |
+        "joinCall" |
+        "recordedCall" |
+        "PerviousCall" |
+        undefined>();
     const { user } = useUser();
     const client = useStreamVideoClient();
     const [value, setValue] = useState({
@@ -104,7 +109,7 @@ const CallList = () => {
                     </Label>
                     <Textarea
                         id="call-description"
-                        className="col-span-3 focus:ring-0 focus:ring-offset-0 focus-visible:right-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm"
+                        className="col-span-3 focus:ring-0 focus:ring-offset-0 focus-visible:right-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm resize-none"
                         placeholder="Enter Description"
                         onChange={(e) => setValue({ ...value, description: e.target.value.toString() })}
 
