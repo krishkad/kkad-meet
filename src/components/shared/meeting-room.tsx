@@ -1,5 +1,5 @@
 "sue client";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CallControls, PaginatedGridLayout, SpeakerLayout, useCall } from '@stream-io/video-react-sdk';
 import { useRouter } from 'next/navigation';
 import MyUiLayout from '../ui/my-layout';
@@ -27,8 +27,12 @@ const MeetingRoom = () => {
     }
   }
 
-  if(call?.endCall()) return router.push('/event');  
-  
+  useEffect(() => {
+    if (!call) return router.push('/event');
+  }, [call]);
+
+
+
   return (
     <div className='w-full overflow-hidden bg-[#252525]'>
       <div className="max-w-wrapper h-dvh">
