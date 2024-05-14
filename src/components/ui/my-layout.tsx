@@ -87,7 +87,7 @@ export const MyParticipantList2 = (props: { participants: StreamVideoParticipant
     return (
         <>
             {participants.map((participant, i) => {
-                return <div className="max-sm:size-full aspect-[9/18]" key={i}>
+                return <div className="size-full aspect-[9/18]" key={i}>
                     <ParticipantView
                         muteAudio
                         participant={participant}
@@ -105,7 +105,7 @@ export const MyFloatingLocalParticipant2 = (props: { participant?: StreamVideoPa
     const { participant } = props;
 
     return (
-        <div className="size-full rounded-md">
+        <div className="size-full aspect-[9/18] rounded-md">
             {participant && <ParticipantView muteAudio participant={participant} className='size-full' />}
         </div>
     )
