@@ -1,6 +1,7 @@
 "use client";
 import {
     CallingState,
+    PaginatedGridLayout,
     ParticipantView,
     StreamVideoParticipant,
     useCall,
@@ -28,16 +29,19 @@ const MyUiLayout = () => {
     };
     return (
         <div className='size-full relative'>
-            {remoteParticipant.length + 1 <= 2 ? <>
+            <PaginatedGridLayout groupSize={2} />
+            {/* {remoteParticipant.length + 1 <= 2 ? <>
                 <MyParticipantList participants={remoteParticipant} />
                 <MyFloatingLocalParticipant participant={localParticipant} />
-            </>: <>
-            <div className="grid grid-cols-2 gap-2">
-                <MyParticipantList2 participants={remoteParticipant} />
-                <MyFloatingLocalParticipant2 participant={localParticipant} />
-            </div>
+            </> : <>
+                <div className="grid grid-cols-2 gap-2 sm:hidden">
+                    <MyParticipantList2 participants={remoteParticipant} />
+                    <MyFloatingLocalParticipant2 participant={localParticipant} />
+                </div>
+                <div className="hidden sm:block">
+                </div>
             </>
-            }
+            } */}
         </div>
     );
 };
