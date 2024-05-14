@@ -12,7 +12,7 @@ import { useToast } from '../ui/use-toast'
 import { Textarea } from '../ui/textarea'
 
 const CallList = () => {
-    const callId = "VH1ID3k5poWs";
+    // const callId = "VH1ID3k5poWs";
     const { toast } = useToast();
     const [callState, setCallState] = useState<"instantCall" | "joinCall" | "recordedCall" | "PerviousCall" | undefined>();
     const { user } = useUser();
@@ -29,7 +29,7 @@ const CallList = () => {
         if (!user || !client) return;
         try {
             const id = crypto.randomUUID();
-            const call = client.call('default', callId);
+            const call = client.call('default', id);
 
             if (!call) throw new Error("faild to create call");
 
