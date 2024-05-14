@@ -29,19 +29,30 @@ const MyUiLayout = () => {
     };
     return (
         <div className='size-full relative'>
-            <PaginatedGridLayout groupSize={2} />
-            {/* {remoteParticipant.length + 1 <= 2 ? <>
+            {/* <PaginatedGridLayout groupSize={2} /> */}
+            {remoteParticipant.length + 1 <= 2 ? <>
                 <MyParticipantList participants={remoteParticipant} />
                 <MyFloatingLocalParticipant participant={localParticipant} />
-            </> : <>
-                <div className="grid grid-cols-2 gap-2 sm:hidden">
+            </> : remoteParticipant.length + 1 <= 4 ? <>
+                <div className={`size-full grid grid-cols-2 gap-2`}>
                     <MyParticipantList2 participants={remoteParticipant} />
                     <MyFloatingLocalParticipant2 participant={localParticipant} />
                 </div>
-                <div className="hidden sm:block">
-                </div>
             </>
-            } */}
+                : remoteParticipant.length + 1 <= 6 ? <>
+                    <div className={`size-full grid grid-cols-2 gap-2`}>
+                        <MyParticipantList2 participants={remoteParticipant} />
+                        <MyFloatingLocalParticipant2 participant={localParticipant} />
+                    </div>
+                </>
+                    : remoteParticipant.length + 1 <= 9 ? <>
+                        <div className={`size-full grid grid-cols-3 gap-2`}>
+                            <MyParticipantList2 participants={remoteParticipant} />
+                            <MyFloatingLocalParticipant2 participant={localParticipant} />
+                        </div>
+                    </> : <PaginatedGridLayout />
+            }
+
         </div>
     );
 };
@@ -90,7 +101,7 @@ export const MyParticipantList2 = (props: { participants: StreamVideoParticipant
     return (
         <>
             {participants.map((participant, i) => {
-                return <div className="size-full aspect-[9/18]" key={i}>
+                return <div className="size-full  rounded-md" key={i}>
                     <ParticipantView
                         muteAudio
                         participant={participant}
@@ -108,7 +119,7 @@ export const MyFloatingLocalParticipant2 = (props: { participant?: StreamVideoPa
     const { participant } = props;
 
     return (
-        <div className="size-full aspect-[9/18] rounded-md">
+        <div className="size-full  rounded-md">
             {participant && <ParticipantView muteAudio participant={participant} className='size-full' />}
         </div>
     )
