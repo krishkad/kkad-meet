@@ -124,7 +124,7 @@ const CallList = () => {
                 buttonText='Enter call link'
                 image='/join-call.svg'
                 onClose={() => setCallState(undefined)}
-                onClick={() => (value.link &&( value.link.startsWith("http://") || value.link.startsWith("https://") )) ? router.push(value.link) : toast({ title: `Enter valid Link ${!!value.link + "and" + !!value.link.startsWith('http://' || 'https://')}`, variant: "destructive" })}
+                onClick={() => (value.link &&( value.link.startsWith("http://") || value.link.startsWith("https://") )) ? router.push(`/event/meeting/${value.link.split('/')[5]}`) : toast({ title: `Enter valid Link ${!!value.link + "and" + !!value.link.startsWith('http://' || 'https://')}`, variant: "destructive" })}
 
             >
                 <div className="w-full flex flex-col gap-2">

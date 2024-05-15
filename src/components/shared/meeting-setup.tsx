@@ -14,7 +14,7 @@ import { Input } from '../ui/input';
 import { useToast } from '../ui/use-toast';
 
 const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: boolean) => void }) => {
-    const [video, setVideo] = useState(true);
+    const [video, setVideo] = useState(false);
     const [copyMeetingUrl, setCopyMeetingUrl] = useState(false);
     const [mic, setMic] = useState(true);
     const call = useCall();
@@ -22,10 +22,11 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
 
     if (!call) {
         throw new Error("useCall should be used in StreamCall");
-    }
+    };
 
     const domain = process.env.NEXT_PUBLIC_APP_API_AUTH;
-    const meetingUrl = `${domain}/meeting/${call?.id}`;
+    const meetingUrl = `${domain}/event/meeting/${call?.id}`;
+
 
     useEffect(() => {
         if (video) {
@@ -39,7 +40,7 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: bool
             call.microphone.disable();
         }
 
-    }, [video, mic, call?.microphone, call?.camera])
+    }, [video, mic, call?.microphone, call?.camera]);
 
 
     const copylink = () => {
