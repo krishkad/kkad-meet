@@ -7,6 +7,8 @@ import { MdVerified } from "react-icons/md";
 
 export default function Home() {
   return (
+
+    
     <main className="w-full">
       <div className="">
         <Hero />

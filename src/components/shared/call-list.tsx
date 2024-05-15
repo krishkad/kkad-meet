@@ -6,9 +6,10 @@ import Loader from './loader';
 import { PiCircleNotchThin } from 'react-icons/pi';
 import MeetingCard from './meeting-card';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const CallsList = ({ type }: { type: 'ended' | 'recorded' }) => {
-
+    const router = useRouter();
     const { endedCalls, isLoading, recordedCalls } = useGetCalls();
     const [recordedCall, setRecordedCall] = useState<CallRecording[]>([]);
 
@@ -56,7 +57,14 @@ const CallsList = ({ type }: { type: 'ended' | 'recorded' }) => {
         <div className="w-full">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
                 {callList && callList.length > 0 && callList.map((call: Call | CallRecording, i) => {
-                    return <MeetingCard key={i} />
+                    return <MeetingCard
+                        description={(call as Call).state.custom.description.substring(0, 20) || "Instant Meeting"}
+                        date={(call as Call).state.startsAt?.toLocaleString()}
+                        buttonText1={type === 'ended' ? undefined : "Play"}
+                        buttonText2={type === 'recorded' ? 'Copy Link' : undefined}
+                        handleClick={type === 'recorded' ? () => router.push(`meeting/${(call as CallRecording).url}`) : undefined}
+                        isPerviousMeeting={type === 'ended'}
+                        key={i} />
                 })}
             </div>
             {callList && callList.length <= 0 && (

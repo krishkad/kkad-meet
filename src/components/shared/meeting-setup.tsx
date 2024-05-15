@@ -14,7 +14,7 @@ import { Input } from '../ui/input';
 import { useToast } from '../ui/use-toast';
 
 const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: boolean) => void }) => {
-    const [video, setVideo] = useState(false);
+    const [video, setVideo] = useState(true);
     const [copyMeetingUrl, setCopyMeetingUrl] = useState(false);
     const [mic, setMic] = useState(true);
     const call = useCall();

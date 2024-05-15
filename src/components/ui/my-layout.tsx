@@ -71,7 +71,6 @@ export const MyParticipantList = (props: { participants: StreamVideoParticipant[
             {participants.map((participant, i) => {
                 return <div className="max-sm:size-full aspect-[9/18]" key={i}>
                     <ParticipantView
-                        muteAudio
                         participant={participant}
                         key={participant.sessionId}
                         className='size-full'
@@ -103,7 +102,6 @@ export const MyParticipantList2 = (props: { participants: StreamVideoParticipant
             {participants.map((participant, i) => {
                 return <div className="size-full  rounded-md" key={i}>
                     <ParticipantView
-                        muteAudio
                         participant={participant}
                         key={participant.sessionId}
                         className='size-full'
