@@ -29,14 +29,14 @@ const CallsList = ({ type }: { type: 'ended' | 'recorded' }) => {
             case 'ended':
                 return (
                     <div className="w-full h-[calc(100dvh-146px)] flex flex-col items-center justify-center gap-4">
-                        <Image src={'/empty.svg'} width={100} height={100} alt='img' />
+                        <Image src={'/empty.svg'} draggable={false} width={100} height={100} alt='img' className='select-none' />
                         <p className="text-sm font-semibold">No Calls Yet</p>
                     </div>
                 )
             case 'recorded':
                 return (
                     <div className="w-full h-[calc(100dvh-146px)] flex flex-col items-center justify-center gap-4">
-                        <Image src={'/empty.svg'} width={100} height={100} alt='img' />
+                        <Image src={'/empty.svg'} draggable={false} width={100} height={100} alt='img' className='select-none' />
                         <p className="text-sm font-semibold">No Recorded Calls</p>
                     </div>
                 )

@@ -8,7 +8,7 @@ import { MdVerified } from "react-icons/md";
 export default function Home() {
   return (
 
-    
+
     <main className="w-full">
       <div className="">
         <Hero />
@@ -26,7 +26,7 @@ export default function Home() {
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account with E-mail and start connecting. Meet to your Loved Once and have Live interaction with seamless experience</p>
 
                 <div className="relative w-full h-[250px] lg:h-[350px] mt-5">
-                  <Image src={'/create-account-people.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                  <Image src={'/create-account-people.png'} draggable={false} priority className="object-contain select-none" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
 
@@ -39,7 +39,7 @@ export default function Home() {
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Effortlessly create rooms and share call links with ease, simplifying the process of initiating conversations and connecting with others.</p>
 
                 <div className="relative w-full h-[250px] lg:h-[350px] mt-5">
-                  <Image src={'/box-photo-gallery.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                  <Image src={'/box-photo-gallery.png'} draggable={false} priority className="object-contain select-none" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
 
@@ -52,7 +52,7 @@ export default function Home() {
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Step into the room and cherish memorable moments with your loved once, creating lasting memories filled with laughter and joy.</p>
 
                 <div className="relative w-full h-[250px] lg:h-[350px] mt-5">
-                  <Image src={'/enjoy.png'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                  <Image src={'/enjoy.png'} draggable={false} priority className="object-contain select-none" fill sizes="height:100%, with:100%" alt="img" />
                 </div>
 
 
@@ -78,7 +78,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="relative w-full h-[350px] md:w-1/2 md:h-full flex justify-end overflow-hidden">
-                <Image src={'/photo-gallery.png'} priority fill sizes="height:100%,with:100%" className="object-cover overflow-hidden" alt="img" />
+                <Image src={'/photo-gallery.png'} draggable={false} priority fill sizes="height:100%,with:100%" className="object-cover overflow-hidden select-none" alt="img" />
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function Home() {
                   <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Experience pristine video quality with our platform, ensuring every call is sharp and clear, even in low bandwith situations.</p>
 
                   <div className="relative w-full h-[250px] mt-5">
-                    <Image src={'meeting.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                    <Image src={'meeting.svg'} draggable={false} priority className="object-contain select-none" fill sizes="height:100%, with:100%" alt="img" />
                   </div>
 
 
@@ -109,7 +109,7 @@ export default function Home() {
                   <p className="font-semibold text-muted-foreground pt-2 sm:pt-4text-sm">Your conversations are fully protected with our end-to-end encryption. Rest easy knowing your privacy is paramount.</p>
 
                   <div className="relative w-full h-[250px] mt-5">
-                    <Image src={'secure.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                    <Image src={'secure.svg'} draggable={false} priority className="object-contain select-none" fill sizes="height:100%, with:100%" alt="img" />
                   </div>
 
 
@@ -122,7 +122,7 @@ export default function Home() {
                   <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Easily navigate our user-friendly interface for seamless video calls. Simple controls make connecting with loved ones or colleagues a breeze.</p>
 
                   <div className="relative w-full h-[250px] mt-5">
-                    <Image src={'interface.svg'} priority className="object-contain" fill sizes="height:100%, with:100%" alt="img" />
+                    <Image src={'interface.svg'} draggable={false} priority className="object-contain select-none" fill sizes="height:100%, with:100%" alt="img" />
                   </div>
 
 
@@ -134,12 +134,12 @@ export default function Home() {
             <div className="max-w-wrapper">
               <div className="w-full flex max-md:flex-col md:items-center max-xl:gap-10">
                 <div className="w-full md:w-1/2">
-                  <h1 className="text-3xl sm:text-4xl font-bold">Your Gateway to Seamless <br className="max-lg:hidden"/>Video Conversations</h1>
+                  <h1 className="text-3xl sm:text-4xl font-bold">Your Gateway to Seamless <br className="max-lg:hidden" />Video Conversations</h1>
                   <p className="text-sm font-semibold text-muted-foreground max-sm:w-full pt-2 sm:pt-5">Effortless video conversations with crystal-clear quality. Connect seamlessly with friends, family, and colleagues worldwide. Welcome to the future of virtual communication!</p>
                 </div>
                 <div className="w-full md:w-1/2">
                   <div className="w-full max-xl:p-10 h-[350px] relative">
-                    <Image src={'/enjoy-call-2.svg'} priority fill sizes="height:100%,with:100%" className="object-contain" alt="img" />
+                    <Image src={'/enjoy-call-2.svg'} draggable={false} priority fill sizes="height:100%,with:100%" className="object-contain select-none" alt="img" />
                   </div>
                 </div>
               </div>

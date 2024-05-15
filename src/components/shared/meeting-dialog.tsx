@@ -40,7 +40,7 @@ export default function MeetingDialog({ open, onClose, title, description, butto
 
     return (
         <Dialog open={open} onOpenChange={onClose}>
-            <DialogContent className="w-[320px] sm:max-w-[425px]" onOpenAutoFocus={(e:any) => e.preventDefault()} >
+            <DialogContent className="w-[320px] sm:max-w-[425px]" onOpenAutoFocus={(e: any) => e.preventDefault()} >
                 <DialogHeader>
                     <DialogTitle>{title}</DialogTitle>
                     <DialogDescription>
@@ -50,7 +50,7 @@ export default function MeetingDialog({ open, onClose, title, description, butto
                 <div className="h-max w-full">
                     <div className="h-[200px] w-full py-4">
                         <div className="relative h-full w-full">
-                            <Image src={image} fill priority className="object-contain" sizes="height:100%,width:100%" alt="call" />
+                            <Image src={image} draggable={false} fill priority className="object-contain select-none" sizes="height:100%,width:100%" alt="call" />
                         </div>
                     </div>
                     {children}
