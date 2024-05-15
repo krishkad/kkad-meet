@@ -124,8 +124,8 @@ const CallList = () => {
                 buttonText='Enter call link'
                 image='/join-call.svg'
                 onClose={() => setCallState(undefined)}
-                onClick={() => !!value.link && !!value.link.includes('http://' || 'https://') ? router.push(value.link) : toast({ title: "Enter valid Link", variant: "destructive" })}
-                
+                onClick={() => (value.link &&( value.link.startsWith("http://") || value.link.startsWith("https://") )) ? router.push(value.link) : toast({ title: `Enter valid Link ${!!value.link + "and" + !!value.link.startsWith('http://' || 'https://')}`, variant: "destructive" })}
+
             >
                 <div className="w-full flex flex-col gap-2">
                     <Label htmlFor="join-call-link" className="font-semibold">
@@ -135,7 +135,7 @@ const CallList = () => {
                         id="join-call-link"
                         className="col-span-3 focus:ring-0 focus:ring-offset-0 focus-visible:right-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm"
                         placeholder="Enter Link"
-                        onChange={(e) => setValue({ ...value, link: e.target.value })}
+                        onChange={(e) => setValue({ ...value, link: e.target.value.toString() })}
 
                     />
                 </div>
