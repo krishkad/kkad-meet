@@ -33,6 +33,7 @@ const MyUiLayout = () => {
             {remoteParticipant.length + 1 <= 2 ? <>
                 <MyParticipantList participants={remoteParticipant} />
                 <MyFloatingLocalParticipant participant={localParticipant} />
+
             </> : remoteParticipant.length + 1 <= 4 ? <>
                 <div className={`size-full grid grid-cols-2 gap-2`}>
                     <MyParticipantList2 participants={remoteParticipant} />
@@ -60,7 +61,6 @@ const MyUiLayout = () => {
 export default MyUiLayout;
 
 
-
 // NOTE ---------------------> PARTICIPANT LIST 
 export const MyParticipantList = (props: { participants: StreamVideoParticipant[] }) => {
 
@@ -69,7 +69,7 @@ export const MyParticipantList = (props: { participants: StreamVideoParticipant[
     return (
         <div className="flex flex-row justify-center gap-2 size-full">
             {participants.map((participant, i) => {
-                return <div className="max-sm:size-full aspect-[9/18]" key={i}>
+                return <div className="size-full sm:aspect-[9/18]" key={i}>
                     <ParticipantView
                         participant={participant}
                         key={participant.sessionId}

@@ -20,7 +20,7 @@ export default function Home() {
               <span className="text-sm font-semibold text-muted-foreground md:w-3/5">Get Started. whether you&apos;re new to video calling an experience face to face conversation, and chat  </span>
             </div>
             <div className="w-full flex flex-col">
-              <div className="w-full max-h p-5 md:p-8 bg-[#F3FDE8] md:mt-64 rounded-3xl max-md:mt-10">
+              <div className="w-full max-h p-5 md:p-8 bg-[#d8b4f86b] md:mt-64 rounded-3xl max-md:mt-10">
                 <span className="text-sm font-bold">Step 1</span>
                 <h2 className="text-2xl md:text-3xl font-bold mt-2 sm:mt-4">Create Account </h2>
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Create account with E-mail and start connecting. Meet to your Loved Once and have Live interaction with seamless experience</p>
@@ -33,7 +33,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full flex flex-col">
-              <div className="w-full max-h max-h p-5 md:p-8 bg-[#F3F3F3] md:-mt-96 rounded-3xl">
+              <div className="w-full max-h max-h p-5 md:p-8 bg-[#EEF5FF] md:-mt-96 rounded-3xl">
                 <span className="text-sm font-bold">Step 2</span>
                 <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Create room & share link</h2>
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Effortlessly create rooms and share call links with ease, simplifying the process of initiating conversations and connecting with others.</p>
@@ -46,7 +46,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full flex flex-col">
-              <div className="w-full max-h max-h p-5 md:p-8 bg-[#FEFDED] rounded-3xl">
+              <div className="w-full max-h max-h p-5 md:p-8 bg-[#ffe79a80] rounded-3xl">
                 <span className="text-sm font-bold">Step 3</span>
                 <h2 className="text-2xl md:text-3xl font-bold  mt-2 sm:mt-4">Enter the room and Enjoy </h2>
                 <p className="font-semibold text-muted-foreground pt-2 sm:pt-4 text-sm">Step into the room and cherish memorable moments with your loved once, creating lasting memories filled with laughter and joy.</p>
